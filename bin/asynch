@@ -24,11 +24,13 @@ echo "source /etc/environment" >> etc/bash.bashrc
 echo 'export PATH=/usr/local/lib:/usr/local/bin:/sbin:/usr/local/:/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games' >> etc/bash.bashrc
 echo "export HOME=/root" >> etc/bash.bashrc
 echo "export LC_ALL=C" >> etc/bash.bashrc
+echo "export OPENSHIFT_SPEECH_REDIS_PORT=6379 ">> etc/bash.bashrc
 rm -rf ubuntu-12.04-x86_64.tar.gz
 
 rm -rf install.sh
 echo "#!/bin/bash"
 echo "export PATH=/usr/local/:/sbin:$PATH" >> install.sh
+echo "export OPENSHIFT_SPEECH_REDIS_PORT=6379 ">> install.sh
 echo "apt-get -y update" >> install.sh 
 echo "apt-get -y install build-essential automake git" >> install.sh
 #Pocketspinx

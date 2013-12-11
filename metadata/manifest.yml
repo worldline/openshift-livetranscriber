@@ -30,6 +30,3 @@ Endpoints:
     Mappings:
       - Frontend: ""
         Options: {"websocket":true}
-  - Private-IP-Name: IP
-    Private-IP-Name: REDIS_PORT
-    Private-Port: 6379
