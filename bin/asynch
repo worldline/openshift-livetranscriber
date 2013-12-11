@@ -32,7 +32,7 @@ echo "#!/bin/bash"
 echo "export PATH=/usr/local/lib:/usr/local/bin:/sbin:/usr/local/:/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games" >> install.sh
 echo "export OPENSHIFT_SPEECH_REDIS_PORT=6379 ">> install.sh
 echo "apt-get -y update" >> install.sh 
-echo "apt-get -y install build-essential automake git libsqlite3-dev" >> install.sh
+echo "apt-get -y install build-essential libtool automake git libsqlite3-dev" >> install.sh
 #Pocketspinx
 echo "cd /tmp" >> install.sh
 echo "wget http://infos-sfenix.apps.zone52.org/sphinxbase-0.8.tar.gz" >> install.sh
