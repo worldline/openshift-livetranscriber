@@ -60,7 +60,7 @@ echo "cd /tmp" >> install.sh
 echo "git clone http://github.com/rubygems/rubygems" >> install.sh
 echo "cd rubygems" >> install.sh
 echo "ruby setup.rb" >> install.sh
-echo "sudo gem install bundler redis" >> install.sh
+echo "gem install bundler redis" >> install.sh
 echo "cd /root/" >> install.sh
 echo "git clone git://github.com/skpvox/LiveTranscriber" >> install.sh
 echo "bundle install">> install.sh
