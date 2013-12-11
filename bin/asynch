@@ -1,0 +1,68 @@
+#!/bin/bash
+# The logic to start up your application should be put in this
+# script. The application will work only if it binds to
+# $OPENSHIFT_INTERNAL_IP:8080
+
+PROOT="proot";
+PROOT_CMD_LINE="./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc" 
+PROOT_CMD_LINE_ROOT="$PROOT_CMD_LINE  -0" 
+
+
+if mkdir mylock; then
+
+rm -rf $PROOT;
+wget https://github.com/maxired/proot-static-build/raw/master/static/proot
+chmod +x $PROOT
+rm -rf ubuntu/*;
+mkdir ubuntu;
+echo "./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash" >> ubuntu.sh
+chmod +x ubuntu.sh
+cd ubuntu;
+wget http://infos-sfenix.apps.zone52.org/ubuntu-12.04-x86_64.tar.gz
+tar xzf ubuntu-12.04-x86_64.tar.gz
+echo "source /etc/environment" >> etc/bash.bashrc
+echo 'export PATH=/sbin:$PATH' >> etc/bash.bashrc
+echo "export HOME=/root" >> etc/bash.bashrc
+echo "export LC_ALL=C" >> etc/bash.bashrc
+rm -rf ubuntu-12.04-x86_64.tar.gz
+
+rm -rf install.sh
+echo "export PATH=/sbin:$PATH" >> install.sh
+echo "apt-get -y update" >> install.sh 
+echo "apt-get -y install build-essential git" >> install.sh
+#Pocketspinx
+echo "cd " >> install.sh
+echo "wget http://infos-sfenix.apps.zone52.org/sphinxbase-0.8.tar.gz" >> install.sh
+echo "tar xzf sphinxbase-0.8.tar.gz" >> install.sh
+echo "cd sphinxbase-0.8" >> install.sh
+echo "./autogen.sh" >> install.sh
+echo "./configure" >> install.sh
+echo "make" >> install.sh
+echo "make install" >> install.sh
+echo "wget http://infos-sfenix.apps.zone52.org/pocketsphinx-0.8.tar.gz" >> install.sh
+echo "tar xzf pocketsphinx-0.8.tar.gz" >> install.sh
+echo "cd pocketsphinx-0.8" >> install.sh
+echo "./autogen.sh" >> install.sh
+echo "./configure" >> install.sh
+echo "make" >> install.sh
+echo "make install" >> install.sh
+echo "cd /root/catkin_ws/" >> install.sh
+#Install LiveTranscriber
+echo "apt-get install -y sox zlib1g-dev libssl-dev libreadline6-dev libyaml-dev" >> install.sh
+echo "cd /tmp" >> install.sh
+echo "wget http://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p247.tar.gz" >> install.sh
+echo "tar -xvzf ruby-2.0.0-p247.tar.gz" >> install.sh
+echo "cd ruby-2.0.0-p247/" >> install.sh
+echo "./configure --prefix=/usr/local" >> install.sh
+echo "make" >> install.sh
+echo "make install" >> install.sh
+echo "cd /tmp" >> install.sh
+echo "git clone http://github.com/rubygems/rubygems" >> install.sh
+echo "cd rubygems" >> install.sh
+echo "ruby setup.rb" >> install.sh
+echo "gem install bundler" >> install.sh
+chmod +x install.sh
+cd ..
+$PROOT_CMD_LINE_ROOT /install.sh
+
+fi

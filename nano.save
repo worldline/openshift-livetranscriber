@@ -1,0 +1,3649 @@
+a564393@a564393-dell:~$ cd Documents/openshift/openshift-
+openshift-email-cartridge/  openshift-ubuntu-cartridge/
+a564393@a564393-dell:~$ cd Documents/openshift/openshift-ubuntu-cartridge/
+a564393@a564393-dell:~/Documents/openshift/openshift-ubuntu-cartridge$ clear
+
+a564393@a564393-dell:~/Documents/openshift/openshift-ubuntu-cartridge$ git add .
+a564393@a564393-dell:~/Documents/openshift/openshift-ubuntu-cartridge$ git commit -m "Adding ROS_IP"
+[master aa536ae] Adding ROS_IP
+ Committer: A564393 <a564393@a564393-dell.(none)>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+a564393@a564393-dell:~/Documents/openshift/openshift-ubuntu-cartridge$ git pushCounting objects: 7, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 490 bytes, done.
+Total 4 (delta 1), reused 0 (delta 0)
+To git@github.com:steffel/openshift-ubuntu-cartridge.git
+   16838db..aa536ae  master -> master
+a564393@a564393-dell:~/Documents/openshift/openshift-ubuntu-cartridge$ ssh 52833c3f67c989549f00000e@10.34.56.50
+
+    *********************************************************************
+
+    You are accessing a service that is for use only by authorized users.  
+    If you do not have authorization, discontinue use at once. 
+    Any use of the services is subject to the applicable terms of the 
+    agreement which can be found at: 
+    https://www.openshift.com/legal
+
+    *********************************************************************
+
+    Welcome to OpenShift shell
+
+    This shell will assist you in managing OpenShift applications.
+
+    !!! IMPORTANT !!! IMPORTANT !!! IMPORTANT !!!
+    Shell access is quite powerful and it is possible for you to
+    accidentally damage your application.  Proceed with care!
+    If worse comes to worst, destroy your application with 'rhc app delete'
+    and recreate it
+    !!! IMPORTANT !!! IMPORTANT !!! IMPORTANT !!!
+
+    Type "help" for more info.
+
+    Note: Your application supports version 2 cartridges.
+
+[hydro3-sfenix.apps.zone52.org 52833c3f67c989549f00000e]\> cd ubuntu/
+[hydro3-sfenix.apps.zone52.org ubuntu]\> ubuntu.sh 
+proot warning: can't chdir("/var/lib/openshift/52833c3f67c989549f00000e/ubuntu/./.") in the guest rootfs: No such file or directory
+proot info: default working directory is now "/"
+proot warning: prctl(PR_SET_NO_NEW_PRIVS): Invalid argument
+proot warning: can't enable ptrace acceleration (seccomp mode 2)
+/usr/bin/groups: cannot find name for group ID 523
+bash: /opt/ros/hydro/setup.bash: No such file or directory
+bash: devel/setup.bash: No such file or directory
+root@node1:/# cd /root/catkin_ws/
+root@node1:~/catkin_ws# bash     
+/usr/bin/groups: cannot find name for group ID 523
+bash: devel/setup.bash: No such file or directory
+root@node1:~/catkin_ws# catkin_make
+Base path: /root/catkin_ws
+Source space: /root/catkin_ws/src
+Build space: /root/catkin_ws/build
+Devel space: /root/catkin_ws/devel
+Install space: /root/catkin_ws/install
+Creating symlink "/root/catkin_ws/src/CMakeLists.txt" pointing to "/opt/ros/hydro/share/catkin/cmake/toplevel.cmake"
+####
+#### Running command: "cmake /root/catkin_ws/src -DCATKIN_DEVEL_PREFIX=/root/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/root/catkin_ws/install" in "/root/catkin_ws/build"
+####
+-- The C compiler identification is GNU
+-- The CXX compiler identification is GNU
+-- Check for working C compiler: /usr/bin/gcc
+-- Check for working C compiler: /usr/bin/gcc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Using CATKIN_DEVEL_PREFIX: /root/catkin_ws/devel
+-- Using CMAKE_PREFIX_PATH: /opt/ros/hydro
+-- This workspace overlays: /opt/ros/hydro
+-- Found PythonInterp: /usr/bin/python (found version "2.7.3")
+-- Using Debian Python package layout
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /root/catkin_ws/build/test_results
+-- Looking for include files CMAKE_HAVE_PTHREAD_H
+-- Looking for include files CMAKE_HAVE_PTHREAD_H - found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE 
+-- Found gtest sources under '/usr/src/gtest': gtests will be built
+-- catkin 0.5.77
+-- BUILD_SHARED_LIBS is on
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /root/catkin_ws/build
+####
+#### Running command: "make -j8 -l8" in "/root/catkin_ws/build"
+####
+root@node1:~/catkin_ws# env | grep -i
+Usage: /bin/grep [OPTION]... PATTERN [FILE]...
+Try `/bin/grep --help' for more information.
+root@node1:~/catkin_ws# env | grep -i ROS
+ROS_ROOT=/opt/ros/hydro/share/ros
+ROS_PACKAGE_PATH=/opt/ros/hydro/share:/opt/ros/hydro/stacks
+ROS_MASTER_URI=http://127.1.5.129:10139
+LD_LIBRARY_PATH=/opt/ros/hydro/lib
+CPATH=/opt/ros/hydro/include
+PATH=/sbin:/opt/ros/hydro/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+ROSLISP_PACKAGE_DIRECTORIES=
+ROS_DISTRO=hydro
+PYTHONPATH=/opt/ros/hydro/lib/python2.7/dist-packages
+OPENSHIFT_UBUNTU_ROS_PORT=10139
+ROS_IP=127.1.5.129
+PKG_CONFIG_PATH=/opt/ros/hydro/lib/pkgconfig
+CMAKE_PREFIX_PATH=/opt/ros/hydro
+ROS_ETC_DIR=/opt/ros/hydro/etc/ros
+root@node1:~/catkin_ws# roscore -p 10139
+... logging to /root/.ros/log/f99ba792-4c40-11e3-b7d7-005056ad6c1c/roslaunch-node1.apps.zone52.org-13469.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+Unable to contact my own server at [http://127.1.5.129:27781/].
+This usually means that the network is not configured properly.
+
+A common cause is that the machine cannot ping itself.  Please check
+for errors by running:
+
+	ping 127.1.5.129
+
+For more tips, please see
+
+	http://www.ros.org/wiki/ROS/NetworkSetup
+
+root@node1:~/catkin_ws# roscore -p 10139
+... logging to /root/.ros/log/f99ba792-4c40-11e3-b7d7-005056ad6c1c/roslaunch-node1.apps.zone52.org-14099.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+Unable to contact my own server at [http://127.1.5.129:31179/].
+This usually means that the network is not configured properly.
+
+A common cause is that the machine cannot ping itself.  Please check
+for errors by running:
+
+	ping 127.1.5.129
+
+For more tips, please see
+
+	http://www.ros.org/wiki/ROS/NetworkSetup
+
+root@node1:~/catkin_ws# vi /opt/ros/hydro/
+.catkin         bin/            include/        setup.sh
+.rosinstall     env.sh          lib/            setup.zsh
+_setup_util.py  etc/            setup.bash      share/
+root@node1:~/catkin_ws# vi /opt/ros/hydro/lib/p
+pkgconfig/ python2.7/ 
+root@node1:~/catkin_ws# vi /opt/ros/hydro/lib/p
+pkgconfig/ python2.7/ 
+root@node1:~/catkin_ws# vi /opt/ros/hydro/lib/python2.7/dist-packages/
+catkin/                          roslib/
+catkin-0.5.77.egg-info           roslib-1.10.8.egg-info
+gencpp/                          rosmake/
+gencpp-0.4.14.egg-info           rosmake-1.10.8.egg-info
+genlisp/                         rosmaster/
+genlisp-0.4.12.egg-info          rosmaster-1.9.50.egg-info
+genmsg/                          rosmsg/
+genmsg-0.4.23.egg-info           rosmsg-1.9.50.egg-info
+genpy/                           rosnode/
+genpy-0.4.14.egg-info            rosnode-1.9.50.egg-info
+message_filters/                 rosparam/
+message_filters-1.9.50.egg-info  rosparam-1.9.50.egg-info
+ros/                             rospy/
+rosbag/                          rospy-1.9.50.egg-info
+rosbag-1.9.50.egg-info           rosservice/
+rosboost_cfg/                    rosservice-1.9.50.egg-info
+rosboost_cfg-1.10.8.egg-info     rostest/
+rosclean/                        rostest-1.9.50.egg-info
+rosclean-1.10.8.egg-info         rostopic/
+roscpp/                          rostopic-1.9.50.egg-info
+roscreate/                       rosunit/
+roscreate-1.10.8.egg-info        rosunit-1.10.8.egg-info
+rosgraph/                        roswtf/
+rosgraph-1.9.50.egg-info         roswtf-1.9.50.egg-info
+rosgraph_msgs/                   std_msgs/
+roslaunch/                       std_srvs/
+roslaunch-1.9.50.egg-info        topic_tools/
+root@node1:~/catkin_ws# vi /opt/ros/hydro/lib/python2.7/dist-packages/ros
+ros/                          rosmaster-1.9.50.egg-info
+rosbag/                       rosmsg/
+rosbag-1.9.50.egg-info        rosmsg-1.9.50.egg-info
+rosboost_cfg/                 rosnode/
+rosboost_cfg-1.10.8.egg-info  rosnode-1.9.50.egg-info
+rosclean/                     rosparam/
+rosclean-1.10.8.egg-info      rosparam-1.9.50.egg-info
+roscpp/                       rospy/
+roscreate/                    rospy-1.9.50.egg-info
+roscreate-1.10.8.egg-info     rosservice/
+rosgraph/                     rosservice-1.9.50.egg-info
+rosgraph-1.9.50.egg-info      rostest/
+rosgraph_msgs/                rostest-1.9.50.egg-info
+roslaunch/                    rostopic/
+roslaunch-1.9.50.egg-info     rostopic-1.9.50.egg-info
+roslib/                       rosunit/
+roslib-1.10.8.egg-info        rosunit-1.10.8.egg-info
+rosmake/                      roswtf/
+rosmake-1.10.8.egg-info       roswtf-1.9.50.egg-info
+rosmaster/                    
+root@node1:~/catkin_ws# vi /opt/ros/hydro/lib/python2.7/dist-packages/rosc 
+rosclean/                  roscreate/
+rosclean-1.10.8.egg-info   roscreate-1.10.8.egg-info
+roscpp/                    
+root@node1:~/catkin_ws# vi /opt/ros/hydro/lib/python2.7/dist-packages/rosc
+rosclean/                  roscreate/
+rosclean-1.10.8.egg-info   roscreate-1.10.8.egg-info
+roscpp/                    
+root@node1:~/catkin_ws# vi /opt/ros/hydro/lib/python2.7/dist-packages/roscpp/
+__init__.py   __init__.pyc  msg/          srv/          
+root@node1:~/catkin_ws# vi /opt/ros/hydro/lib/python2.7/dist-packages/roscpp/
+__init__.py   __init__.pyc  msg/          srv/          
+root@node1:~/catkin_ws# vi /opt/ros/hydro/lib/python2.7/dist-packages/       
+catkin/                          roslib/
+catkin-0.5.77.egg-info           roslib-1.10.8.egg-info
+gencpp/                          rosmake/
+gencpp-0.4.14.egg-info           rosmake-1.10.8.egg-info
+genlisp/                         rosmaster/
+genlisp-0.4.12.egg-info          rosmaster-1.9.50.egg-info
+genmsg/                          rosmsg/
+genmsg-0.4.23.egg-info           rosmsg-1.9.50.egg-info
+genpy/                           rosnode/
+genpy-0.4.14.egg-info            rosnode-1.9.50.egg-info
+message_filters/                 rosparam/
+message_filters-1.9.50.egg-info  rosparam-1.9.50.egg-info
+ros/                             rospy/
+rosbag/                          rospy-1.9.50.egg-info
+rosbag-1.9.50.egg-info           rosservice/
+rosboost_cfg/                    rosservice-1.9.50.egg-info
+rosboost_cfg-1.10.8.egg-info     rostest/
+rosclean/                        rostest-1.9.50.egg-info
+rosclean-1.10.8.egg-info         rostopic/
+roscpp/                          rostopic-1.9.50.egg-info
+roscreate/                       rosunit/
+roscreate-1.10.8.egg-info        rosunit-1.10.8.egg-info
+rosgraph/                        roswtf/
+rosgraph-1.9.50.egg-info         roswtf-1.9.50.egg-info
+rosgraph_msgs/                   std_msgs/
+roslaunch/                       std_srvs/
+roslaunch-1.9.50.egg-info        topic_tools/
+root@node1:~/catkin_ws# vi /opt/ros/hydro/lib/python2.7/dist-packages/ros
+ros/                          rosmaster-1.9.50.egg-info
+rosbag/                       rosmsg/
+rosbag-1.9.50.egg-info        rosmsg-1.9.50.egg-info
+rosboost_cfg/                 rosnode/
+rosboost_cfg-1.10.8.egg-info  rosnode-1.9.50.egg-info
+rosclean/                     rosparam/
+rosclean-1.10.8.egg-info      rosparam-1.9.50.egg-info
+roscpp/                       rospy/
+roscreate/                    rospy-1.9.50.egg-info
+roscreate-1.10.8.egg-info     rosservice/
+rosgraph/                     rosservice-1.9.50.egg-info
+rosgraph-1.9.50.egg-info      rostest/
+rosgraph_msgs/                rostest-1.9.50.egg-info
+roslaunch/                    rostopic/
+roslaunch-1.9.50.egg-info     rostopic-1.9.50.egg-info
+roslib/                       rosunit/
+roslib-1.10.8.egg-info        rosunit-1.10.8.egg-info
+rosmake/                      roswtf/
+rosmake-1.10.8.egg-info       roswtf-1.9.50.egg-info
+rosmaster/                    
+root@node1:~/catkin_ws# vi /opt/ros/hydro/lib/python2.7/dist-packages/ros
+ros/                          rosmaster-1.9.50.egg-info
+rosbag/                       rosmsg/
+rosbag-1.9.50.egg-info        rosmsg-1.9.50.egg-info
+rosboost_cfg/                 rosnode/
+rosboost_cfg-1.10.8.egg-info  rosnode-1.9.50.egg-info
+rosclean/                     rosparam/
+rosclean-1.10.8.egg-info      rosparam-1.9.50.egg-info
+roscpp/                       rospy/
+roscreate/                    rospy-1.9.50.egg-info
+roscreate-1.10.8.egg-info     rosservice/
+rosgraph/                     rosservice-1.9.50.egg-info
+rosgraph-1.9.50.egg-info      rostest/
+rosgraph_msgs/                rostest-1.9.50.egg-info
+roslaunch/                    rostopic/
+roslaunch-1.9.50.egg-info     rostopic-1.9.50.egg-info
+roslib/                       rosunit/
+roslib-1.10.8.egg-info        rosunit-1.10.8.egg-info
+rosmake/                      roswtf/
+rosmake-1.10.8.egg-info       roswtf-1.9.50.egg-info
+rosmaster/                    
+root@node1:~/catkin_ws# vi /opt/ros/hydro/lib/python2.7/dist-packages/rosgraph
+rosgraph/                 rosgraph-1.9.50.egg-info  rosgraph_msgs/
+root@node1:~/catkin_ws# vi /opt/ros/hydro/lib/python2.7/dist-packages/rosgraph/network.py
+root@node1:~/catkin_ws# roscore -p 10139
+... logging to /root/.ros/log/f99ba792-4c40-11e3-b7d7-005056ad6c1c/roslaunch-node1.apps.zone52.org-16086.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+started roslaunch server http://127.1.5.129:30410/
+ros_comm version 1.9.50
+
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro
+ * /rosversion
+
+NODES
+
+roscore cannot run as another roscore/master is already running. 
+Please kill other roscore/master processes before relaunching.
+The ROS_MASTER_URI is http://127.1.5.129:10139/
+root@node1:~/catkin_ws# roscore -p 10139
+... logging to /root/.ros/log/f99ba792-4c40-11e3-b7d7-005056ad6c1c/roslaunch-node1.apps.zone52.org-16168.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+started roslaunch server http://127.1.5.129:30922/
+ros_comm version 1.9.50
+
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro
+ * /rosversion
+
+NODES
+
+roscore cannot run as another roscore/master is already running. 
+Please kill other roscore/master processes before relaunching.
+The ROS_MASTER_URI is http://127.1.5.129:10139/
+root@node1:~/catkin_ws# clear
+
+root@node1:~/catkin_ws# netstat -antu | grep -i     
+Usage: /bin/grep [OPTION]... PATTERN [FILE]...
+Try `/bin/grep --help' for more information.
+root@node1:~/catkin_ws# clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+root@node1:~/catkin_ws# netstat -antu | grep -i 10139
+tcp        0      0 0.0.0.0:10139           0.0.0.0:*               LISTEN     
+tcp        0      0 127.1.5.129:10139       127.1.5.129:17246       TIME_WAIT  
+tcp        0      0 10.34.56.50:34604       10.34.56.50:10139       CLOSE_WAIT 
+tcp        0      0 127.1.5.129:16037       127.1.5.129:10139       TIME_WAIT  
+tcp        0      0 127.1.5.129:17244       127.1.5.129:10139       TIME_WAIT  
+tcp        0      0 127.1.5.129:10139       127.1.5.129:16097       TIME_WAIT  
+root@node1:~/catkin_ws# netstat -antu | grep -i 10139
+tcp        0      0 0.0.0.0:10139           0.0.0.0:*               LISTEN     
+tcp        0      0 127.1.5.129:10139       127.1.5.129:17246       TIME_WAIT  
+tcp        0      0 10.34.56.50:34604       10.34.56.50:10139       CLOSE_WAIT 
+tcp        0      0 127.1.5.129:17244       127.1.5.129:10139       TIME_WAIT  
+root@node1:~/catkin_ws# netstat -antu | grep -i 10139
+tcp        0      0 0.0.0.0:10139           0.0.0.0:*               LISTEN     
+tcp        0      0 127.1.5.129:10139       127.1.5.129:17246       TIME_WAIT  
+tcp        0      0 10.34.56.50:34604       10.34.56.50:10139       CLOSE_WAIT 
+tcp        0      0 127.1.5.129:17244       127.1.5.129:10139       TIME_WAIT  
+root@node1:~/catkin_ws# netstat -antu | grep -i 10139
+tcp        0      0 0.0.0.0:10139           0.0.0.0:*               LISTEN     
+tcp        0      0 127.1.5.129:10139       127.1.5.129:17246       TIME_WAIT  
+tcp        0      0 10.34.56.50:34604       10.34.56.50:10139       CLOSE_WAIT 
+tcp        0      0 127.1.5.129:17244       127.1.5.129:10139       TIME_WAIT  
+root@node1:~/catkin_ws# clear
+
+root@node1:~/catkin_ws# netstat -antu | grep -i 10139^C
+root@node1:~/catkin_ws# ps -aux
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+523       6992  0.0  0.0  18352  2400 pts/2    S    03:51   0:00 /lib64/ld-linu
+523      12191  0.5  0.0 297776 20296 ?        Sl   03:52   0:02 /lib64/ld-linu
+523      12205  0.7  0.0 434784 18044 ?        Ssl  03:52   0:03 /lib64/ld-linu
+523      12221  0.5  0.0 318708  6516 ?        Ssl  03:52   0:02 /lib64/ld-linu
+523      17591  0.0  0.0  15232  1160 pts/2    R+   04:00   0:00 /lib64/ld-linu
+523      23747  0.0  0.0   9196  1336 ?        S    03:45   0:00 /bin/bash /var
+523      25070 17.2  0.0   1580   764 ?        S    03:47   2:10 ./proot -r ubu
+523      25071  0.0  0.0   4356   716 ?        S    03:47   0:00 /lib64/ld-linu
+523      29862  0.0  0.0 106524  1892 ?        S    03:48   0:00 sshd: 52833c3f
+523      29921  0.0  0.0 108664  2384 pts/2    Ss   03:48   0:00 /bin/bash --in
+523      30952  0.0  0.0 108664  1256 pts/2    S    03:48   0:00 /bin/bash --in
+523      30953  1.2  0.0   1436   604 pts/2    R    03:48   0:08 ./proot -r ubu
+523      30954  0.0  0.0  18048  2096 pts/2    S    03:48   0:00 /lib64/ld-linu
+root@node1:~/catkin_ws# ps -aux
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+523       6992  0.0  0.0  18352  2400 pts/2    S    03:51   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+523      12191  0.5  0.0 297776 20296 ?        Sl   03:52   0:02 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/h
+523      12205  0.7  0.0 434784 18044 ?        Ssl  03:52   0:03 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/h
+523      12221  0.5  0.0 318708  6516 ?        Ssl  03:52   0:02 /lib64/ld-linux-x86-64.so.2 /opt/ros/hydro/lib/rosout/
+523      17612  0.0  0.0  15232  1160 pts/2    R+   04:00   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+523      23747  0.0  0.0   9196  1336 ?        S    03:45   0:00 /bin/bash /var/lib/openshift/52833c3f67c989549f00000e/
+523      25070 17.1  0.0   1580   764 ?        S    03:47   2:10 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc
+523      25071  0.0  0.0   4356   716 ?        S    03:47   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+523      29862  0.0  0.0 106524  1892 ?        S    03:48   0:00 sshd: 52833c3f67c989549f00000e@pts/2
+523      29921  0.0  0.0 108664  2384 pts/2    Ss   03:48   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+523      30952  0.0  0.0 108664  1256 pts/2    S    03:48   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+523      30953  1.2  0.0   1436   604 pts/2    S    03:48   0:08 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /p
+523      30954  0.0  0.0  18048  2096 pts/2    S    03:48   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+root@node1:~/catkin_ws# clear
+
+root@node1:~/catkin_ws# netstat -antu | grep -i 10139timed out waiting for input: auto-logout
+root@node1:~/catkin_ws# killall roscore
+roscore: no process found
+root@node1:~/catkin_ws# ps -aux
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+523      12191  0.5  0.0 297776 20296 ?        Sl   03:52   0:04 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/h
+523      12205  0.6  0.0 434784 18044 ?        Ssl  03:52   0:05 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/h
+523      12221  0.6  0.0 318708  6516 ?        Ssl  03:52   0:04 /lib64/ld-linux-x86-64.so.2 /opt/ros/hydro/lib/rosout/
+523      21146  0.0  0.0  15232  1152 pts/2    R+   04:05   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+523      23747  0.0  0.0   9196  1336 ?        S    03:45   0:00 /bin/bash /var/lib/openshift/52833c3f67c989549f00000e/
+523      25070 12.0  0.0   1580   764 ?        S    03:47   2:13 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc
+523      25071  0.0  0.0   4356   716 ?        S    03:47   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+523      29862  0.0  0.0 106524  1892 ?        S    03:48   0:00 sshd: 52833c3f67c989549f00000e@pts/2
+523      29921  0.0  0.0 108664  2384 pts/2    Ss   03:48   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+523      30952  0.0  0.0 108664  1256 pts/2    S    03:48   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+523      30953  0.8  0.0   1436   604 pts/2    R    03:48   0:08 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /p
+523      30954  0.0  0.0  18048  2096 pts/2    S    03:48   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+root@node1:~/catkin_ws# killall sh
+sh: no process found
+root@node1:~/catkin_ws# kill -9 25071
+root@node1:~/catkin_ws# clear 
+
+root@node1:~/catkin_ws# ros
+rosdep                 rosdep-source          rosdistro_build_cache  rosdistro_reformat     rosversion
+root@node1:~/catkin_ws# ros
+rosdep                 rosdep-source          rosdistro_build_cache  rosdistro_reformat     rosversion
+root@node1:~/catkin_ws# bash
+/usr/bin/groups: cannot find name for group ID 523
+
+root@node1:~/catkin_ws# 
+root@node1:~/catkin_ws# rosc
+roscd          rosclean       roscore        roscp          roscreate-pkg  
+root@node1:~/catkin_ws# roscore -p10139
+... logging to /root/.ros/log/f99ba792-4c40-11e3-b7d7-005056ad6c1c/roslaunch-node1.apps.zone52.org-22465.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+started roslaunch server http://127.1.5.129:22577/
+ros_comm version 1.9.50
+
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro
+ * /rosversion
+
+NODES
+
+roscore cannot run as another roscore/master is already running. 
+Please kill other roscore/master processes before relaunching.
+The ROS_MASTER_URI is http://127.1.5.129:10139/
+root@node1:~/catkin_ws# roscore -p 10139
+... logging to /root/.ros/log/f99ba792-4c40-11e3-b7d7-005056ad6c1c/roslaunch-node1.apps.zone52.org-22488.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+started roslaunch server http://127.1.5.129:33168/
+ros_comm version 1.9.50
+
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro
+ * /rosversion
+
+NODES
+
+roscore cannot run as another roscore/master is already running. 
+Please kill other roscore/master processes before relaunching.
+The ROS_MASTER_URI is http://127.1.5.129:10139/
+root@node1:~/catkin_ws# netstat -antu | grep -i 8091
+root@node1:~/catkin_ws# netstat -antu | grep -i 10139
+tcp        0      0 0.0.0.0:10139           0.0.0.0:*               LISTEN     
+tcp        0      0 10.34.56.50:34604       10.34.56.50:10139       CLOSE_WAIT 
+tcp        0      0 127.1.5.129:26514       127.1.5.129:10139       TIME_WAIT  
+tcp        0      0 127.1.5.129:26552       127.1.5.129:10139       TIME_WAIT  
+tcp        0      0 127.1.5.129:10139       127.1.5.129:26768       TIME_WAIT  
+tcp        0      0 127.1.5.129:10139       127.1.5.129:26709       TIME_WAIT  
+root@node1:~/catkin_ws# Connection to 10.34.56.50 closed by remote host.
+Connection to 10.34.56.50 closed.
+a564393@a564393-dell:~/Documents/openshift/openshift-ubuntu-cartridge$ ssh 527b9ef867c989f2fe00005b@10.34.56.50
+
+    *********************************************************************
+
+    You are accessing a service that is for use only by authorized users.  
+    If you do not have authorization, discontinue use at once. 
+    Any use of the services is subject to the applicable terms of the 
+    agreement which can be found at: 
+    https://www.openshift.com/legal
+
+    *********************************************************************
+
+    Welcome to OpenShift shell
+
+    This shell will assist you in managing OpenShift applications.
+
+    !!! IMPORTANT !!! IMPORTANT !!! IMPORTANT !!!
+    Shell access is quite powerful and it is possible for you to
+    accidentally damage your application.  Proceed with care!
+    If worse comes to worst, destroy your application with 'rhc app delete'
+    and recreate it
+    !!! IMPORTANT !!! IMPORTANT !!! IMPORTANT !!!
+
+    Type "help" for more info.
+
+    Note: Your application supports version 2 cartridges.
+
+[hydro-sfenix.apps.zone52.org 527b9ef867c989f2fe00005b]\> netstat -antu | grep -i 10139
+[hydro-sfenix.apps.zone52.org 527b9ef867c989f2fe00005b]\> clear
+
+[hydro-sfenix.apps.zone52.org 527b9ef867c989f2fe00005b]\> exit
+exit
+Connection to 10.34.56.50 closed.
+a564393@a564393-dell:~/Documents/openshift/openshift-ubuntu-cartridge$ git add .
+a564393@a564393-dell:~/Documents/openshift/openshift-ubuntu-cartridge$ git commit -m "Adding ROS_IP"
+[master 293f94a] Adding ROS_IP
+ Committer: A564393 <a564393@a564393-dell.(none)>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 deletion(-)
+a564393@a564393-dell:~/Documents/openshift/openshift-ubuntu-cartridge$ git push
+Counting objects: 7, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 449 bytes, done.
+Total 4 (delta 1), reused 0 (delta 0)
+To git@github.com:steffel/openshift-ubuntu-cartridge.git
+   aa536ae..293f94a  master -> master
+a564393@a564393-dell:~/Documents/openshift/openshift-ubuntu-cartridge$ ssh 528341db67c989549f000030@10.34.56.51
+
+    *********************************************************************
+
+    You are accessing a service that is for use only by authorized users.  
+    If you do not have authorization, discontinue use at once. 
+    Any use of the services is subject to the applicable terms of the 
+    agreement which can be found at: 
+    https://www.openshift.com/legal
+
+    *********************************************************************
+
+    Welcome to OpenShift shell
+
+    This shell will assist you in managing OpenShift applications.
+
+    !!! IMPORTANT !!! IMPORTANT !!! IMPORTANT !!!
+    Shell access is quite powerful and it is possible for you to
+    accidentally damage your application.  Proceed with care!
+    If worse comes to worst, destroy your application with 'rhc app delete'
+    and recreate it
+    !!! IMPORTANT !!! IMPORTANT !!! IMPORTANT !!!
+
+    Type "help" for more info.
+
+    Note: Your application supports version 2 cartridges.
+
+[hydro3-sfenix.apps.zone52.org 528341db67c989549f000030]\> cd ubuntu/
+[hydro3-sfenix.apps.zone52.org ubuntu]\> ubuntu.sh 
+proot warning: can't chdir("/var/lib/openshift/528341db67c989549f000030/ubuntu/./.") in the guest rootfs: No such file or directory
+proot info: default working directory is now "/"
+proot warning: prctl(PR_SET_NO_NEW_PRIVS): Invalid argument
+proot warning: can't enable ptrace acceleration (seccomp mode 2)
+/usr/bin/groups: cannot find name for group ID 5443
+bash: /opt/ros/hydro/setup.bash: No such file or directory
+bash: devel/setup.bash: No such file or directory
+root@node2:/# ps -aux
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+5443       554  3.0  0.1  73960 50348 ?        S    04:13   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y instal
+5443       559  0.7  0.0  28420  2344 ?        S    04:13   0:00 /lib64/ld-linux-x86-64.so.2 /usr/lib/apt/methods/http
+5443       560 23.2  0.0  28420  2340 ?        R    04:13   0:06 /lib64/ld-linux-x86-64.so.2 /usr/lib/apt/methods/http
+5443      1090  0.0  0.0 106524  1884 ?        S    04:14   0:00 sshd: 528341db67c989549f000030@pts/0
+5443      1091  0.7  0.0 108664  2388 pts/0    Ss   04:14   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+5443      1233  0.0  0.0 108664  1260 pts/0    S    04:14   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+5443      1234  3.0  0.0   1440   556 pts/0    S    04:14   0:00 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /p
+5443      1235  1.0  0.0  18048  2080 pts/0    S    04:14   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+5443      1245  0.0  0.0  15232  1160 pts/0    R+   04:14   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+5443     25976  0.0  0.0   9196  1268 ?        S    04:09   0:00 /bin/bash /var/lib/openshift/528341db67c989549f000030/
+5443     27543 27.6  0.0   1436   552 ?        S    04:12   0:27 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc
+5443     27544  0.0  0.0   4356   636 ?        S    04:12   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node2:/# ps -aux
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+5443      1090  0.0  0.0 106524  1884 ?        S    04:14   0:00 sshd: 528341db67c989549f000030@pts/0
+5443      1091  0.3  0.0 108664  2388 pts/0    Ss   04:14   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+5443      1233  0.0  0.0 108664  1260 pts/0    S    04:14   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+5443      1234  1.0  0.0   1440   556 pts/0    S    04:14   0:00 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+5443      1235  0.3  0.0  18048  2080 pts/0    S    04:14   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+5443      1543  0.0  0.0  15232  1160 pts/0    R+   04:14   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+root@node2:/# ps -aux
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+5443      1090  0.0  0.0 106524  1884 ?        S    04:14   0:00 sshd: 528341db67c989549f000030@pts/0
+5443      1091  0.2  0.0 108664  2388 pts/0    Ss   04:14   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+5443      1233  0.0  0.0 108664  1260 pts/0    S    04:14   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+5443      1234  0.9  0.0   1440   556 pts/0    R    04:14   0:00 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+5443      1235  0.2  0.0  18048  2080 pts/0    S    04:14   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+5443      1545  0.0  0.0  15232  1160 pts/0    R+   04:14   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+root@node2:/# bash
+/usr/bin/groups: cannot find name for group ID 5443
+bash: /opt/ros/hydro/setup.bash: No such file or directory
+bash: devel/setup.bash: No such file or directory
+root@node2:/#     
+root@node2:/# roscore
+bash: roscore: command not found
+root@node2:/# clear
+
+root@node2:/# exit
+exit
+root@node2:/# exit
+exit
+[hydro3-sfenix.apps.zone52.org ubuntu]\> ubuntu.sh 
+proot warning: can't chdir("/var/lib/openshift/528341db67c989549f000030/ubuntu/./.") in the guest rootfs: No such file or directory
+proot info: default working directory is now "/"
+proot warning: prctl(PR_SET_NO_NEW_PRIVS): Invalid argument
+proot warning: can't enable ptrace acceleration (seccomp mode 2)
+/usr/bin/groups: cannot find name for group ID 5443
+bash: /opt/ros/hydro/setup.bash: No such file or directory
+bash: devel/setup.bash: No such file or directory
+root@node2:/# 
+root@node2:/# clear
+
+
+
+
+
+
+
+root@node2:/# ps -aux
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+5443      1090  0.0  0.0 106524  1884 ?        S    04:14   0:00 sshd: 528341db67c989549f000030@pts/0
+5443      1091  0.1  0.0 108664  2392 pts/0    Ss   04:14   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+5443      2056  0.0  0.0 108664  1260 pts/0    S    04:15   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+5443      2057  1.6  0.0   1440   556 pts/0    R    04:15   0:00 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+5443      2058  0.5  0.0  18048  2040 pts/0    S    04:15   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+5443      2070  0.0  0.0  15232  1160 pts/0    R+   04:15   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+root@node2:/# Connection to 10.34.56.51 closed by remote host.
+Connection to 10.34.56.51 closed.
+a564393@a564393-dell:~/Documents/openshift/openshift-ubuntu-cartridge$ ssh 5283434967c9890173000001@10.34.56.50
+
+    *********************************************************************
+
+    You are accessing a service that is for use only by authorized users.  
+    If you do not have authorization, discontinue use at once. 
+    Any use of the services is subject to the applicable terms of the 
+    agreement which can be found at: 
+    https://www.openshift.com/legal
+
+    *********************************************************************
+
+    Welcome to OpenShift shell
+
+    This shell will assist you in managing OpenShift applications.
+
+    !!! IMPORTANT !!! IMPORTANT !!! IMPORTANT !!!
+    Shell access is quite powerful and it is possible for you to
+    accidentally damage your application.  Proceed with care!
+    If worse comes to worst, destroy your application with 'rhc app delete'
+    and recreate it
+    !!! IMPORTANT !!! IMPORTANT !!! IMPORTANT !!!
+
+    Type "help" for more info.
+
+    Note: Your application supports version 2 cartridges.
+
+[hydro3-sfenix.apps.zone52.org 5283434967c9890173000001]\> clear
+
+[hydro3-sfenix.apps.zone52.org 5283434967c9890173000001]\> cd ubuntu/
+[hydro3-sfenix.apps.zone52.org ubuntu]\> ubuntu.sh 
+proot warning: can't chdir("/var/lib/openshift/5283434967c9890173000001/ubuntu/./.") in the guest rootfs: No such file or directory
+proot info: default working directory is now "/"
+proot warning: prctl(PR_SET_NO_NEW_PRIVS): Invalid argument
+proot warning: can't enable ptrace acceleration (seccomp mode 2)
+/usr/bin/groups: cannot find name for group ID 522
+bash: /opt/ros/hydro/setup.bash: No such file or directory
+bash: devel/setup.bash: No such file or directory
+root@node1:/# clear
+
+
+
+
+
+
+
+
+
+
+
+root@node1:/# ps -aux
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 19.1  0.0   1440   564 ?        S    04:18   0:03 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   648 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+522      30661 18.1  0.1  61544 41592 ?        D    04:18   0:02 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y update
+522      30692  0.0  0.0 108664  1252 pts/2    S    04:18   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30693  1.0  0.0   1444   556 pts/2    R    04:18   0:00 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522      30694  0.1  0.0  18048  2040 pts/2    S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      30769  1.0  0.0  15232  1160 pts/2    R+   04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+root@node1:/# clear
+
+
+
+
+
+
+
+root@node1:/# exit
+exit
+[hydro3-sfenix.apps.zone52.org ubuntu]\> ubuntu.sh 
+proot warning: can't chdir("/var/lib/openshift/5283434967c9890173000001/ubuntu/./.") in the guest rootfs: No such file or directory
+proot info: default working directory is now "/"
+proot warning: prctl(PR_SET_NO_NEW_PRIVS): Invalid argument
+proot warning: can't enable ptrace acceleration (seccomp mode 2)
+/usr/bin/groups: cannot find name for group ID 522
+bash: /opt/ros/hydro/setup.bash: No such file or directory
+bash: devel/setup.bash: No such file or directory
+root@node1:/# ps -aux
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       3972  1.6  0.1  82600 50832 ?        S    04:19   0:01 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install ros-hydro-ros-base
+522       4591 26.7  0.0  33544 17660 ?        R    04:20   0:07 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg --status-fd 43 --unpack --auto-deconfigure /
+522       5033  0.0  0.0   8680   700 ?        S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg-deb --fsys-tarfile /var/cache/apt/archives/l
+522       5034  0.2  0.0   8680   364 ?        S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg-deb --fsys-tarfile /var/cache/apt/archives/l
+522       5035  6.0  0.0   8684   568 ?        S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg-deb --fsys-tarfile /var/cache/apt/archives/l
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  2.0  0.0   1444   556 pts/2    R    04:20   0:00 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.5  0.0  18048  2080 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522       5078  0.0  0.0  15232  1168 pts/2    R+   04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 26.4  0.0   1440   620 ?        S    04:18   0:38 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear
+
+root@node1:/# clear; ps -aux
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       3972  1.4  0.1  82600 50832 ?        S    04:19   0:01 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install ros-hydro-ros-base
+522       4591 28.0  0.0  35788 19952 ?        D    04:20   0:11 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg --status-fd 43 --unpack --auto-deconfigure /
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  1.1  0.0   1444   556 pts/2    R    04:20   0:00 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.3  0.0  18048  2080 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522       5767  0.0  0.0   8680   700 ?        S    04:21   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg-deb --fsys-tarfile /var/cache/apt/archives/l
+522       5768  1.0  0.0   8680   364 ?        S    04:21   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg-deb --fsys-tarfile /var/cache/apt/archives/l
+522       5769 31.0  0.0   8684   568 ?        S    04:21   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg-deb --fsys-tarfile /var/cache/apt/archives/l
+522       5775  0.0  0.0  15232  1168 pts/2    R+   04:21   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 28.5  0.0   1440   620 ?        S    04:18   0:46 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       3972  1.1  0.1  82600 50832 ?        S    04:19   0:01 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install ros-hydro-ros-base
+522       4591 26.8  0.0  39376 23508 ?        R    04:20   0:17 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg --status-fd 43 --unpack --auto-deconfigure /
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  0.8  0.0   1444   556 pts/2    R    04:20   0:00 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2080 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522       6505  0.0  0.0      0     0 ?        Z    04:21   0:00 [ld-2.15.so] <defunct>
+522       6513  0.0  0.0  15232  1168 pts/2    R+   04:21   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 30.0  0.0   1440   620 ?        S    04:18   0:55 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       3972  1.1  0.1  82600 50832 ?        S    04:19   0:01 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install ros-hydro-ros-base
+522       4591 26.7  0.0  39508 23584 ?        D    04:20   0:18 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg --status-fd 43 --unpack --auto-deconfigure /
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  1.0  0.0   1444   556 pts/2    R    04:20   0:00 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2080 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522       6518  0.0  0.0  15232  1168 pts/2    R+   04:21   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 30.1  0.0   1440   620 ?        S    04:18   0:56 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       3972  1.1  0.1  82600 50832 ?        S    04:19   0:01 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install ros-hydro-ros-base
+522       4591 26.7  0.0  39504 23580 ?        D    04:20   0:18 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg --status-fd 43 --unpack --auto-deconfigure /
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  1.1  0.0   1444   556 pts/2    R    04:20   0:00 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2080 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522       6521  0.0  0.0  15232  1168 pts/2    R+   04:21   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 30.1  0.0   1440   620 ?        S    04:18   0:56 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       3972  0.8  0.1  82600 50832 ?        S    04:19   0:01 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install ros-hydro-ros-base
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  0.6  0.0   1444   556 pts/2    S    04:20   0:00 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.0  0.0  18048  2080 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      11849  3.8  0.0  12148  3604 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg --status-fd 43 --configure librtmp0:amd64 li
+522      12147  0.0  0.0   4356   644 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /var/lib/dpkg/info/libboost-python1.46-dev.postins
+522      12159  0.0  0.0  29860  5708 ?        R    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /usr/bin/pycompile -p libboost-python1.46-
+522      12161  0.0  0.0  15232  1168 pts/2    R+   04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 31.8  0.0   1440   628 ?        S    04:18   1:15 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       3972  0.8  0.1  82600 50832 ?        S    04:19   0:01 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install ros-hydro-ros-base
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  0.6  0.0   1444   556 pts/2    R    04:20   0:00 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      11849  3.8  0.0  12148  3604 ?        D    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg --status-fd 43 --configure librtmp0:amd64 li
+522      12190  0.0  0.0  15232  1168 pts/2    R+   04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 31.8  0.0   1440   628 ?        S    04:18   1:16 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       3972  0.8  0.1  82600 50832 ?        S    04:19   0:01 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install ros-hydro-ros-base
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  0.6  0.0   1444   556 pts/2    S    04:20   0:00 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.0  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      11849  3.9  0.0  12148  3604 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg --status-fd 43 --configure librtmp0:amd64 li
+522      12233  0.0  0.0   4356   640 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /var/lib/dpkg/info/python-dateutil.postinst config
+522      12235  0.0  0.0  34304  7408 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /usr/bin/pycompile -p python-dateutil
+522      12237  0.0  0.0  15232  1168 pts/2    R+   04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      12238  0.0  0.0    364   108 ?        T    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c /usr/bin/python2.7 -m py_compile -
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 31.8  0.0   1440   628 ?        R    04:18   1:16 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       3972  0.8  0.1  82600 50832 ?        S    04:19   0:01 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install ros-hydro-ros-base
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  0.7  0.0   1444   556 pts/2    R    04:20   0:00 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.0  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      11849  3.3  0.0  12148  3604 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg --status-fd 43 --configure librtmp0:amd64 li
+522      12253  0.0  0.0   4356   688 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /var/lib/dpkg/info/python-docutils.postinst config
+522      12266  8.0  0.0  33276  7484 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /usr/bin/pycompile -p python-docutils
+522      12267  0.0  0.0   4356   616 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c /usr/bin/python2.7 -m py_compile -
+522      12269  0.0  0.0  36108 12216 ?        R    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python2.7 -m py_compile -
+522      12272  0.0  0.0  15232  1172 pts/2    R+   04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 31.9  0.0   1440   628 ?        S    04:18   1:17 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       3972  0.7  0.1  82600 50832 ?        S    04:19   0:01 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install ros-hydro-ros-base
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  0.7  0.0   1444   556 pts/2    S    04:20   0:00 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      11849  3.1  0.0  12148  3604 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg --status-fd 43 --configure librtmp0:amd64 li
+522      12281  0.0  0.0   4356   640 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /var/lib/dpkg/info/python-chardet.postinst configu
+522      12283  7.0  0.0  33276  7448 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /usr/bin/pycompile -p python-chardet
+522      12284  0.0  0.0   4356   616 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c /usr/bin/python2.7 -m py_compile -
+522      12285  0.0  0.0  34412 10348 ?        R    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python2.7 -m py_compile -
+522      12289  0.0  0.0  15232  1172 pts/2    R+   04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 31.8  0.0   1440   628 ?        S    04:18   1:17 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       3972  0.7  0.1  82600 50832 ?        S    04:19   0:01 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install ros-hydro-ros-base
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  0.7  0.0   1444   556 pts/2    S    04:20   0:00 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      11849  3.0  0.0  12148  3604 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg --status-fd 43 --configure librtmp0:amd64 li
+522      12303  0.0  0.0   4356   640 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /var/lib/dpkg/info/python-imaging.postinst configu
+522      12306  0.0  0.0  30640  6780 ?        T    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /usr/bin/pycompile -p python-imaging
+522      12308  0.0  0.0  15232  1168 pts/2    R+   04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 31.9  0.0   1440   628 ?        R    04:18   1:18 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       3972  0.7  0.1  82600 50832 ?        S    04:19   0:01 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install ros-hydro-ros-base
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  0.8  0.0   1444   556 pts/2    S    04:20   0:00 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      11849  2.6  0.0  12148  3604 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg --status-fd 43 --configure librtmp0:amd64 li
+522      12339  0.0  0.0   4356   640 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /var/lib/dpkg/info/python-numpy.postinst configure
+522      12341  8.0  0.0  33680  7620 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /usr/bin/pycompile -p python-numpy
+522      12342  1.0  0.0   4356   616 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c /usr/bin/python2.7 -m py_compile -
+522      12344 57.0  0.0  37264 13592 ?        R    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python2.7 -m py_compile -
+522      12347  0.0  0.0  15232  1172 pts/2    R+   04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 32.0  0.0   1440   628 ?        S    04:18   1:19 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       3972  0.7  0.1  82600 50832 ?        S    04:19   0:01 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install ros-hydro-ros-base
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  0.8  0.0   1444   556 pts/2    S    04:20   0:00 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      11849  2.3  0.0  12148  3608 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg --status-fd 43 --configure librtmp0:amd64 li
+522      12381  0.0  0.0   4356   692 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /var/lib/dpkg/info/python3.2-minimal.postinst conf
+522      12390  0.0  0.0   4356   384 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /var/lib/dpkg/info/python3.2-minimal.postinst conf
+522      12394  0.0  0.0  35440 11548 ?        R    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python3.2 /usr/lib/python3.2/py_compile.py /usr/l
+522      12396  0.0  0.0  15232  1168 pts/2    R+   04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 32.0  0.0   1440   640 ?        S    04:18   1:20 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       3972  0.7  0.1  82600 50832 ?        S    04:19   0:01 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install ros-hydro-ros-base
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  0.8  0.0   1444   556 pts/2    R    04:20   0:00 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      11849  2.3  0.0  12148  3608 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg --status-fd 43 --configure librtmp0:amd64 li
+522      12403  0.0  0.0   4356   676 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -e /var/lib/dpkg/info/python3.2.postinst configure
+522      12404  0.0  0.0   4356   440 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -e /var/lib/dpkg/info/python3.2.postinst configure
+522      12408  0.0  0.0  36548 12308 ?        D    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python3.2 /usr/lib/python3.2/py_compile.py /usr/l
+522      12410  0.0  0.0  15232  1168 pts/2    R+   04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        R    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 32.0  0.0   1572   736 ?        S    04:18   1:20 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       3972  0.7  0.1  82600 50832 ?        S    04:19   0:01 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install ros-hydro-ros-base
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  0.8  0.0   1444   556 pts/2    R    04:20   0:00 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      11849  2.2  0.0  12148  3608 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg --status-fd 43 --configure librtmp0:amd64 li
+522      12403  0.0  0.0   4356   676 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -e /var/lib/dpkg/info/python3.2.postinst configure
+522      12404  0.0  0.0   4356   440 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -e /var/lib/dpkg/info/python3.2.postinst configure
+522      12408 76.0  0.0  39108 15180 ?        R    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python3.2 /usr/lib/python3.2/py_compile.py /usr/l
+522      12412  0.0  0.0  15232  1168 pts/2    R+   04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 31.9  0.0   1572   736 ?        S    04:18   1:20 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       3972  0.7  0.1  82600 50832 ?        S    04:19   0:01 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install ros-hydro-ros-base
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  0.8  0.0   1444   556 pts/2    R    04:20   0:01 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      11849  2.1  0.0  12148  3608 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg --status-fd 43 --configure librtmp0:amd64 li
+522      12403  0.0  0.0   4356   676 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -e /var/lib/dpkg/info/python3.2.postinst configure
+522      12404  0.0  0.0   4356   440 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -e /var/lib/dpkg/info/python3.2.postinst configure
+522      12408 81.0  0.0  41476 17556 ?        R    04:22   0:01 /lib64/ld-linux-x86-64.so.2 /usr/bin/python3.2 /usr/lib/python3.2/py_compile.py /usr/l
+522      12442  0.0  0.0  15232  1168 pts/2    R+   04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 31.9  0.0   1572   736 ?        S    04:18   1:21 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       3972  0.7  0.1  82600 50832 ?        S    04:19   0:01 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install ros-hydro-ros-base
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  0.9  0.0   1444   556 pts/2    R    04:20   0:01 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      11849  2.0  0.0  12148  3608 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg --status-fd 43 --configure librtmp0:amd64 li
+522      12445  0.0  0.0   4356   704 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /var/lib/dpkg/info/python3.postinst configure 
+522      12452  0.0  0.0  33888  9696 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python3 /usr/bin/py3compile -p python3 /usr/share
+522      12454  0.0  0.0  15232  1168 pts/2    R+   04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 31.9  0.0   1580   744 ?        R    04:18   1:21 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       3972  0.7  0.1  82600 50832 ?        S    04:19   0:01 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install ros-hydro-ros-base
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  1.0  0.0   1444   556 pts/2    R    04:20   0:01 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      11849  1.9  0.0  12148  3608 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg --status-fd 43 --configure librtmp0:amd64 li
+522      12478  0.0  0.0   4356   640 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /var/lib/dpkg/info/python3-setuptools.postinst con
+522      12480  0.0  0.0  33628  9508 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python3 /usr/bin/py3compile -p python3-setuptools
+522      12481  0.0  0.0   4356   616 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c /usr/bin/python3.2 -m py_compile -
+522      12483  0.0  0.0  33584  9620 ?        D    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python3.2 -m py_compile -
+522      12493  0.0  0.0  15232  1172 pts/2    R+   04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 32.1  0.0   1580   744 ?        R    04:18   1:22 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       3972  0.7  0.1  82600 50832 ?        S    04:19   0:01 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install ros-hydro-ros-base
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  1.0  0.0   1444   556 pts/2    S    04:20   0:01 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      11849  1.9  0.0  12148  3612 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg --status-fd 43 --configure librtmp0:amd64 li
+522      12506  0.0  0.0  52612  8468 ?        R    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/perl -w /usr/share/debconf/frontend /var/lib/dpkg
+522      12509  0.0  0.0  15232  1168 pts/2    R+   04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 32.1  0.0   1580   744 ?        S    04:18   1:22 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       3972  0.7  0.1  82600 50832 ?        S    04:19   0:01 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install ros-hydro-ros-base
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  1.0  0.0   1444   556 pts/2    S    04:20   0:01 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      11849  2.0  0.0  12144  3608 ?        D    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg --status-fd 43 --configure librtmp0:amd64 li
+522      12529  0.0  0.0  15232  1168 pts/2    R+   04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 32.0  0.0   1580   744 ?        S    04:18   1:23 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       3972  0.7  0.1  82600 50832 ?        S    04:19   0:01 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install ros-hydro-ros-base
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  1.0  0.0   1444   556 pts/2    S    04:20   0:01 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      11849  2.1  0.0  12144  3608 ?        D    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg --status-fd 43 --configure librtmp0:amd64 li
+522      12531  0.0  0.0  15232  1168 pts/2    R+   04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 31.9  0.0   1580   744 ?        S    04:18   1:23 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       3972  0.7  0.1  82600 50832 ?        S    04:19   0:01 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install ros-hydro-ros-base
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  1.0  0.0   1444   556 pts/2    S    04:20   0:01 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      11849  2.2  0.0  12148  3612 ?        D    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg --status-fd 43 --configure librtmp0:amd64 li
+522      12537  0.0  0.0  15232  1168 pts/2    R+   04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 31.8  0.0   1580   744 ?        S    04:18   1:23 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       3972  0.7  0.1  82600 50832 ?        S    04:19   0:01 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install ros-hydro-ros-base
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  1.1  0.0   1444   556 pts/2    S    04:20   0:01 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      11849  2.2  0.0  12148  3612 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/dpkg --status-fd 43 --configure librtmp0:amd64 li
+522      12540  0.0  0.0   4356   672 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /var/lib/dpkg/info/python-support.postinst trigger
+522      12541  0.0  0.0  32992  7056 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /usr/sbin/update-python-modules --post-ins
+522      12542  0.0  0.0  29204  5004 ?        R    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python2.7 /usr/lib/python2.7/compileall.py -q /us
+522      12544  0.0  0.0  15232  1168 pts/2    R+   04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 31.9  0.0   1580   744 ?        S    04:18   1:23 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  1.1  0.0   1444   556 pts/2    R    04:20   0:01 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      12553  0.0  0.0  15232  1160 pts/2    R+   04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      12554  0.0  0.0  22200  1988 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install git
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 31.9  0.0   1580   744 ?        R    04:18   1:23 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+
+
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  1.1  0.0   1444   556 pts/2    R    04:20   0:01 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      12554 72.0  0.1  73696 49956 ?        R    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install git
+522      12559  0.0  0.0  15232  1160 pts/2    R+   04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 31.8  0.0   1580   744 ?        R    04:18   1:23 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+
+
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  1.1  0.0   1444   556 pts/2    R    04:20   0:01 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      12554 36.5  0.1  73696 50108 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install git
+522      12561  3.0  0.0  28420  2336 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/lib/apt/methods/http
+522      12568  1.0  0.0  15232  1160 pts/2    R+   04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 31.7  0.0   1580   744 ?        S    04:18   1:23 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  1.2  0.0   1444   556 pts/2    S    04:20   0:01 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      12554 36.5  0.1  73696 50108 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install git
+522      12561 17.0  0.0  28420  2336 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/lib/apt/methods/http
+522      12570  0.0  0.0  15232  1160 pts/2    R+   04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 31.7  0.0   1580   744 ?        S    04:18   1:23 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  1.2  0.0   1444   556 pts/2    S    04:20   0:01 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      12554 24.3  0.1  73876 50316 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/apt-get -y install git
+522      12574  0.0  0.0      0     0 ?        Z    04:22   0:00 [ld-2.15.so] <defunct>
+522      12575  0.0  0.0   4356   616 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c /usr/sbin/dpkg-preconfigure --apt || true
+522      12576  0.0  0.0  55924 11796 ?        S    04:22   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/perl -w /usr/sbin/dpkg-preconfigure --apt
+522      12585  0.0  0.0  15232  1160 pts/2    R+   04:22   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 31.7  0.0   1580   744 ?        R    04:18   1:24 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   672 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  0.8  0.0   1444   556 pts/2    S    04:20   0:01 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.0  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      16151  1.0  0.0  43236  9020 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/bin/catkin_make
+522      16469  0.0  0.0   8784  1112 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -j8 -l8
+522      16472  0.3  0.0   8784  1272 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f CMakeFiles/Makefile2 all
+522      16507  0.0  0.0   8764  1128 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f gtest/CMakeFiles/gtest.dir/build.make gte
+522      16529  0.0  0.0   4356   656 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/gtest && /usr/bin/c++ 
+522      16530  0.0  0.0   4592   908 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/c++ -Dgtest_EXPORTS -DGTEST_CREATE_SHARED_LIBRARY
+522      16534 17.4  0.4 137352 113024 ?       T    04:23   0:01 /lib64/ld-linux-x86-64.so.2 /usr/lib/gcc/x86_64-linux-gnu/4.6/cc1plus -quiet -I /usr/s
+522      16627  0.6  0.0   8784  1192 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f rosbridge/rosbridge_library/CMakeFiles/ro
+522      16683  0.2  0.0   8788  1168 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f rosbridge/rosbridge_library/CMakeFiles/ro
+522      16722  4.3  0.0   8804  1188 ?        T    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f rosbridge/rosapi/CMakeFiles/rosapi_genera
+522      16767  0.0  0.0   4356   652 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosbridge_li
+522      16770  5.5  0.0  32368  6464 ?        T    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/genpy/cmake/../../../
+522      16779  0.0  0.0   4356   652 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosbridge_li
+522      16781 17.0  0.0  34168  8200 ?        T    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/gencpp/cmake/../../..
+522      16804  1.0  0.0   8796  1168 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f rosbridge/rosapi/CMakeFiles/rosapi_genera
+522      16810  0.0  0.0   4356   652 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosapi && ..
+522      16811 23.0  0.0  32672  6868 ?        T    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/gencpp/cmake/../../..
+522      16820  0.0  0.0   4356   652 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosbridge_li
+522      16821 39.0  0.0  33008  7016 ?        T    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/gencpp/cmake/../../..
+522      16830  0.0  0.0   4356   660 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c /usr/bin/cmake -E cmake_echo_color --switch= --
+522      16831  0.0  0.0   4356   656 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosapi && ..
+522      16833  0.0  0.0 107200  3508 ?        T    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/cmake -E cmake_echo_color --switch= --blue --bold
+522      16834  0.0  0.0  28668  4096 ?        T    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/genpy/cmake/../../../
+522      16838  0.0  0.0   4356   652 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosapi && ..
+522      16840  0.0  0.0  28256  3636 ?        T    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/gencpp/cmake/../../..
+522      16841  0.0  0.0  15232  1164 pts/2    R+   04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 34.1  0.0   1580   760 ?        R    04:18   1:49 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   716 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  0.9  0.0   1444   556 pts/2    R    04:20   0:01 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      16151  1.0  0.0  43236  9020 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/bin/catkin_make
+522      16469  0.0  0.0   8784  1112 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -j8 -l8
+522      16472  0.3  0.0   8784  1272 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f CMakeFiles/Makefile2 all
+522      16507  0.0  0.0   8764  1128 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f gtest/CMakeFiles/gtest.dir/build.make gte
+522      16529  0.0  0.0   4356   656 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/gtest && /usr/bin/c++ 
+522      16530  0.0  0.0   4592   908 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/c++ -Dgtest_EXPORTS -DGTEST_CREATE_SHARED_LIBRARY
+522      16534 17.1  0.4 138376 113892 ?       T    04:23   0:01 /lib64/ld-linux-x86-64.so.2 /usr/lib/gcc/x86_64-linux-gnu/4.6/cc1plus -quiet -I /usr/s
+522      16627  0.5  0.0   8784  1192 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f rosbridge/rosbridge_library/CMakeFiles/ro
+522      16683  0.1  0.0   8788  1176 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f rosbridge/rosbridge_library/CMakeFiles/ro
+522      16722  3.2  0.0   8804  1188 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f rosbridge/rosapi/CMakeFiles/rosapi_genera
+522      16804  0.5  0.0   8796  1176 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f rosbridge/rosapi/CMakeFiles/rosapi_genera
+522      16838  0.0  0.0   4356   652 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosapi && ..
+522      16840 43.0  0.0  34368  8264 ?        T    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/gencpp/cmake/../../..
+522      16848  0.0  0.0   4356   652 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosbridge_li
+522      16849  9.0  0.0  29204  5044 ?        T    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/gencpp/cmake/../../..
+522      16863  0.0  0.0   4356   652 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosapi && ..
+522      16865  0.0  0.0  28256  3780 ?        T    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/gencpp/cmake/../../..
+522      16868  0.0  0.0   4356   656 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosapi && ..
+522      16871  0.0  0.0  29204  5008 ?        T    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/genpy/cmake/../../../
+522      16872  0.0  0.0   8792  1156 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f rosbridge/rosapi/CMakeFiles/rosapi_genera
+522      16876  0.0  0.0   4356   656 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosapi && ..
+522      16877  0.0  0.0  32224  6316 ?        T    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/genpy/cmake/../../../
+522      16878  0.0  0.0   4356   652 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosbridge_li
+522      16881  0.0  0.0  29736  5676 ?        T    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/genpy/cmake/../../../
+522      16887  0.0  0.0   4356   656 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosapi && ..
+522      16888  0.0  0.0  27096  1208 ?        R    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/genlisp/cmake/../../.
+522      16892  0.0  0.0  15232  1168 pts/2    R+   04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 34.4  0.0   1580   760 ?        R    04:18   1:50 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   716 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  0.9  0.0   1444   556 pts/2    S    04:20   0:01 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      16151  0.8  0.0  43236  9020 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/bin/catkin_make
+522      16469  0.0  0.0   8784  1112 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -j8 -l8
+522      16472  0.2  0.0   8784  1272 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f CMakeFiles/Makefile2 all
+522      16507  0.0  0.0   8764  1128 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f gtest/CMakeFiles/gtest.dir/build.make gte
+522      16529  0.0  0.0   4356   656 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/gtest && /usr/bin/c++ 
+522      16530  0.0  0.0   4592   908 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/c++ -Dgtest_EXPORTS -DGTEST_CREATE_SHARED_LIBRARY
+522      16534 12.1  0.4 139680 115712 ?       T    04:23   0:01 /lib64/ld-linux-x86-64.so.2 /usr/lib/gcc/x86_64-linux-gnu/4.6/cc1plus -quiet -I /usr/s
+522      16627  1.3  0.0   8784  1196 ?        R    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f rosbridge/rosbridge_library/CMakeFiles/ro
+522      16683  1.0  0.0   8788  1196 ?        D    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f rosbridge/rosbridge_library/CMakeFiles/ro
+522      16722  1.6  0.0   8804  1204 ?        T    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f rosbridge/rosapi/CMakeFiles/rosapi_genera
+522      16804  0.1  0.0   8796  1180 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f rosbridge/rosapi/CMakeFiles/rosapi_genera
+522      16872  1.8  0.0   8792  1176 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f rosbridge/rosapi/CMakeFiles/rosapi_genera
+522      17013  0.0  0.0   4356   652 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosbridge_li
+522      17014 20.0  0.0  32240  6304 ?        T    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/gencpp/cmake/../../..
+522      17019  0.0  0.0   4356   656 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosapi && ..
+522      17022 10.0  0.0  30144  6008 ?        T    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/genpy/cmake/../../../
+522      17030  0.0  0.0   4356   652 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosapi && ..
+522      17031  0.0  0.0   4356   656 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosapi && ..
+522      17032  0.0  0.0  29208  4928 ?        T    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/genlisp/cmake/../../.
+522      17033  0.0  0.0  29204  5004 ?        T    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/gencpp/cmake/../../..
+522      17044  0.0  0.0  15232  1164 pts/2    R+   04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 34.8  0.0   1580   760 ?        R    04:18   1:53 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   716 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  0.9  0.0   1444   556 pts/2    S    04:20   0:01 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      16151  0.6  0.0  43236  9020 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/bin/catkin_make
+522      16469  0.0  0.0   8784  1112 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -j8 -l8
+522      16472  0.1  0.0   8784  1272 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f CMakeFiles/Makefile2 all
+522      16507  0.0  0.0   8764  1128 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f gtest/CMakeFiles/gtest.dir/build.make gte
+522      16529  0.0  0.0   4356   656 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/gtest && /usr/bin/c++ 
+522      16530  0.0  0.0   4592   908 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/c++ -Dgtest_EXPORTS -DGTEST_CREATE_SHARED_LIBRARY
+522      16534  9.2  0.4 144308 120488 ?       T    04:23   0:02 /lib64/ld-linux-x86-64.so.2 /usr/lib/gcc/x86_64-linux-gnu/4.6/cc1plus -quiet -I /usr/s
+522      16627  0.8  0.0   8784  1200 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f rosbridge/rosbridge_library/CMakeFiles/ro
+522      16683  0.5  0.0   8788  1200 ?        T    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f rosbridge/rosbridge_library/CMakeFiles/ro
+522      16722  1.4  0.0   8804  1236 ?        T    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f rosbridge/rosapi/CMakeFiles/rosapi_genera
+522      16804  0.1  0.0   8796  1212 ?        T    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f rosbridge/rosapi/CMakeFiles/rosapi_genera
+522      16872  0.8  0.0   8792  1208 ?        T    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f rosbridge/rosapi/CMakeFiles/rosapi_genera
+522      17314  0.0  0.0   4356   656 ?        S    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosapi && ..
+522      17318 22.0  0.0  30156  6080 ?        T    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/genlisp/cmake/../../.
+522      17566  0.0  0.0   4356   656 ?        S    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosapi && ..
+522      17576  0.0  0.0  29596  5556 ?        T    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/genlisp/cmake/../../.
+522      17661  0.0  0.0   4356   652 ?        S    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosbridge_li
+522      17672  0.0  0.0  29732  5804 ?        R    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/gencpp/cmake/../../..
+522      17702  0.0  0.0      0     0 ?        Z    04:24   0:00 [ld-2.15.so] <defunct>
+522      17720  0.0  0.0   4356   652 ?        S    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosapi && ..
+522      17728  0.0  0.0  28060  3320 ?        R    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/gencpp/cmake/../../..
+522      17732  0.0  0.0  15232  1164 pts/2    R+   04:24   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 35.9  0.0   1580   760 ?        R    04:18   2:00 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   716 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  0.9  0.0   1444   556 pts/2    R    04:20   0:01 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      16151  0.5  0.0  43236  9020 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/bin/catkin_make
+522      16469  0.0  0.0   8784  1112 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -j8 -l8
+522      16472  0.2  0.0   8784  1272 ?        T    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f CMakeFiles/Makefile2 all
+522      16507  0.0  0.0   8764  1128 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f gtest/CMakeFiles/gtest.dir/build.make gte
+522      16529  0.0  0.0   4356   656 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/gtest && /usr/bin/c++ 
+522      16530  0.0  0.0   4592   908 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/c++ -Dgtest_EXPORTS -DGTEST_CREATE_SHARED_LIBRARY
+522      16534  9.1  0.4 148404 124164 ?       D    04:23   0:02 /lib64/ld-linux-x86-64.so.2 /usr/lib/gcc/x86_64-linux-gnu/4.6/cc1plus -quiet -I /usr/s
+522      16804  0.3  0.0   8796  1240 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f rosbridge/rosapi/CMakeFiles/rosapi_genera
+522      17878  0.0  0.0   4356   652 ?        S    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosapi && ..
+522      17880 41.0  0.0  34368  8236 ?        R    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/gencpp/cmake/../../..
+522      17893  0.0  0.0   4356   652 ?        S    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosapi && ..
+522      17894 31.0  0.0  34036  8016 ?        D    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/gencpp/cmake/../../..
+522      17905  0.0  0.0   4356   652 ?        S    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosapi && ..
+522      17908  0.0  0.0  32672  6724 ?        R    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/gencpp/cmake/../../..
+522      17914  0.0  0.0   4356   652 ?        S    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosapi && ..
+522      17916  0.0  0.0  34364  8136 ?        T    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/gencpp/cmake/../../..
+522      17922  0.0  0.0   4356   652 ?        S    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosbridge/rosapi && ..
+522      17923  0.0  0.0  29728  5696 ?        R    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/share/gencpp/cmake/../../..
+522      17929  0.0  0.0  15232  1164 pts/2    R+   04:24   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 36.4  0.0   1580   764 ?        R    04:18   2:03 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   716 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  0.9  0.0   1444   556 pts/2    S    04:20   0:01 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      16151  0.5  0.0  43236  9020 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/bin/catkin_make
+522      16469  0.0  0.0   8784  1112 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -j8 -l8
+522      16472  0.2  0.0   8784  1272 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f CMakeFiles/Makefile2 all
+522      16507  0.0  0.0   8764  1128 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f gtest/CMakeFiles/gtest.dir/build.make gte
+522      16529  0.0  0.0   4356   656 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/gtest && /usr/bin/c++ 
+522      16530  0.0  0.0   4592   908 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/c++ -Dgtest_EXPORTS -DGTEST_CREATE_SHARED_LIBRARY
+522      16534  9.9  0.5 155956 132192 ?       D    04:23   0:03 /lib64/ld-linux-x86-64.so.2 /usr/lib/gcc/x86_64-linux-gnu/4.6/cc1plus -quiet -I /usr/s
+522      17939  0.0  0.0   8768  1192 ?        S    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f rosauth/CMakeFiles/ros_mac_authentication
+522      17947  0.0  0.0   4356   656 ?        S    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosauth && /usr/bin/c+
+522      17948  0.0  0.0   4592   892 ?        S    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/c++ -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=
+522      17949 22.0  0.0  43708 16288 ?        D    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /usr/lib/gcc/x86_64-linux-gnu/4.6/cc1plus -quiet -I /root/
+522      17960  0.0  0.0  15232  1168 pts/2    R+   04:24   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 36.4  0.0   1580   764 ?        R    04:18   2:04 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   716 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  0.9  0.0   1444   556 pts/2    S    04:20   0:01 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      16151  0.5  0.0  43236  9020 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/bin/catkin_make
+522      16469  0.0  0.0   8784  1112 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -j8 -l8
+522      16472  0.2  0.0   8784  1272 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f CMakeFiles/Makefile2 all
+522      16507  0.0  0.0   8764  1128 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f gtest/CMakeFiles/gtest.dir/build.make gte
+522      17939  0.0  0.0   8768  1192 ?        S    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f rosauth/CMakeFiles/ros_mac_authentication
+522      17947  0.0  0.0   4356   656 ?        S    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosauth && /usr/bin/c+
+522      17948  0.0  0.0   4592   892 ?        S    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/c++ -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=
+522      17949 44.5  0.2  93412 67688 ?        R    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /usr/lib/gcc/x86_64-linux-gnu/4.6/cc1plus -quiet -I /root/
+522      17968  0.0  0.0   4356   656 ?        S    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/gtest && /usr/bin/cmak
+522      17969  0.0  0.0  15232  1168 pts/2    R+   04:24   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      17970  0.0  0.0  79580   736 ?        T    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/cmake -E cmake_link_script CMakeFiles/gtest.dir/l
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 36.4  0.0   1580   764 ?        R    04:18   2:05 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   716 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear; ps -aux
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  0.9  0.0   1444   556 pts/2    R    04:20   0:02 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      16151  0.5  0.0  43236  9020 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/python /opt/ros/hydro/bin/catkin_make
+522      16469  0.0  0.0   8784  1112 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -j8 -l8
+522      16472  0.3  0.0   8784  1272 ?        S    04:23   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f CMakeFiles/Makefile2 all
+522      17939  0.0  0.0   8768  1192 ?        S    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f rosauth/CMakeFiles/ros_mac_authentication
+522      17947  0.0  0.0   4356   656 ?        S    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosauth && /usr/bin/c+
+522      17948  0.0  0.0   4592   892 ?        S    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/c++ -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=
+522      17949 64.3  0.5 163296 140648 ?       T    04:24   0:01 /lib64/ld-linux-x86-64.so.2 /usr/lib/gcc/x86_64-linux-gnu/4.6/cc1plus -quiet -I /root/
+522      17980  0.0  0.0   8768  1196 ?        S    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/make -f rosauth/CMakeFiles/ros_mac_authentication
+522      17984  0.0  0.0   4356   656 ?        S    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh -c cd /root/catkin_ws/build/rosauth && /usr/bin/c+
+522      17985 12.0  0.0   4592   892 ?        S    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /usr/bin/c++ -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=
+522      17986  0.0  0.0  51596 24152 ?        T    04:24   0:00 /lib64/ld-linux-x86-64.so.2 /usr/lib/gcc/x86_64-linux-gnu/4.6/cc1plus -quiet -I /root/
+522      17988  0.0  0.0  15232  1168 pts/2    R+   04:24   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      28518  0.0  0.0   9196  1332 ?        S    04:16   0:00 /bin/bash /var/lib/openshift/5283434967c9890173000001/ubuntu/bin/asynch
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522      30659 36.5  0.0   1580   764 ?        R    04:18   2:05 ./proot -r ubuntu -b /dev -b /etc/resolv.conf -b /proc -0 /install.sh
+522      30660  0.0  0.0   4356   716 ?        S    04:18   0:00 /lib64/ld-linux-x86-64.so.2 /bin/sh /install.sh
+root@node1:/# clear
+
+root@node1:/# clear; ps -aux
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+522       5051  0.0  0.0 108664  1252 pts/2    S    04:20   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+522       5052  0.9  0.0   1444   556 pts/2    R    04:20   0:02 ./proot -r ubuntu -0 -b /dev -b /etc/resolv.conf -b /proc bash
+522       5053  0.1  0.0  18048  2084 pts/2    S    04:20   0:00 /lib64/ld-linux-x86-64.so.2 /bin/bash
+522      18057  0.0  0.0  15232  1160 pts/2    R+   04:24   0:00 /lib64/ld-linux-x86-64.so.2 /bin/ps -aux
+522      29094  0.0  0.0 106524  1888 ?        S    04:16   0:00 sshd: 5283434967c9890173000001@pts/2
+522      29095  0.0  0.0 108664  2384 pts/2    Ss   04:16   0:00 /bin/bash --init-file /usr/bin/rhcsh -i
+root@node1:/# exit
+exit
+[hydro3-sfenix.apps.zone52.org ubuntu]\> ubuntu.sh 
+proot warning: can't chdir("/var/lib/openshift/5283434967c9890173000001/ubuntu/./.") in the guest rootfs: No such file or directory
+proot info: default working directory is now "/"
+proot warning: prctl(PR_SET_NO_NEW_PRIVS): Invalid argument
+proot warning: can't enable ptrace acceleration (seccomp mode 2)
+/usr/bin/groups: cannot find name for group ID 522
+bash: devel/setup.bash: No such file or directory
+root@node1:/# 
+root@node1:/# rosc
+roscd          rosclean       roscore        roscp          roscreate-pkg  
+root@node1:/# rosc
+roscd          rosclean       roscore        roscp          roscreate-pkg  
+root@node1:/# roscore -p 10139
+... logging to /root/.ros/log/757b882e-4c45-11e3-b7ca-005056ad6c1c/roslaunch-node1.apps.zone52.org-18178.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+Unable to contact my own server at [http://127.1.5.1:33068/].
+This usually means that the network is not configured properly.
+
+A common cause is that the machine cannot ping itself.  Please check
+for errors by running:
+
+	ping 127.1.5.1
+
+For more tips, please see
+
+	http://www.ros.org/wiki/ROS/NetworkSetup
+
+root@node1:/# clear
+
+root@node1:/# se
+sed               sendmail          sensible-browser  seq               setcifsacl        setlogcons        setterm           
+see               sendmail-msp      sensible-editor   service           setfacl           setmetamode       setvesablank      
+select            sendmail-mta      sensible-mda      set               setkeycodes       setquota          
+select-editor     sendmailconfig    sensible-pager    setarch           setleds           setsid            
+root@node1:/# se
+sed               sendmail          sensible-browser  seq               setcifsacl        setlogcons        setterm           
+see               sendmail-msp      sensible-editor   service           setfacl           setmetamode       setvesablank      
+select            sendmail-mta      sensible-mda      set               setkeycodes       setquota          
+select-editor     sendmailconfig    sensible-pager    setarch           setleds           setsid            
+root@node1:/# sed 
+bin/        dev/        fastboot    install.sh  lib64/      media/      opt/        root/       sbin/       srv/        tmp/        var/
+boot/       etc/        home/       lib/        lost+found/ mnt/        proc/       run/        selinux/    sys/        usr/        
+root@node1:/# sed 
+Usage: /bin/sed [OPTION]... {script-only-if-no-other-script} [input-file]...
+
+  -n, --quiet, --silent
+                 suppress automatic printing of pattern space
+  -e script, --expression=script
+                 add the script to the commands to be executed
+  -f script-file, --file=script-file
+                 add the contents of script-file to the commands to be executed
+  --follow-symlinks
+                 follow symlinks when processing in place
+  -i[SUFFIX], --in-place[=SUFFIX]
+                 edit files in place (makes backup if extension supplied)
+  -l N, --line-length=N
+                 specify the desired line-wrap length for the `l' command
+  --posix
+                 disable all GNU extensions.
+  -r, --regexp-extended
+                 use extended regular expressions in the script.
+  -s, --separate
+                 consider files as separate rather than as a single continuous
+                 long stream.
+  -u, --unbuffered
+                 load minimal amounts of data from the input files and flush
+                 the output buffers more often
+      --help     display this help and exit
+      --version  output version information and exit
+
+If no -e, --expression, -f, or --file option is given, then the first
+non-option argument is taken as the sed script to interpret.  All
+remaining arguments are names of input files; if no input files are
+specified, then the standard input is read.
+
+GNU sed home page: <http://www.gnu.org/software/sed/>.
+General help using GNU software: <http://www.gnu.org/gethelp/>.
+root@node1:/# clear
+
+root@node1:/# sed -i "257        elif address.startswith('127.'):" /opt/ros/hydro/
+.catkin         _setup_util.py  env.sh          include/        setup.bash      setup.zsh       
+.rosinstall     bin/            etc/            lib/            setup.sh        share/          
+root@node1:/# sed -i "257        elif address.startswith('127.'):" /opt/ros/hydro/lib/p
+pkgconfig/ python2.7/ 
+root@node1:/# sed -i "257        elif address.startswith('127.'):" /opt/ros/hydro/lib/python2.7/dist-packages/
+catkin/                          rosbag-1.9.50.egg-info           roslib-1.10.8.egg-info           rosservice-1.9.50.egg-info
+catkin-0.5.77.egg-info           rosboost_cfg/                    rosmake/                         rostest/
+gencpp/                          rosboost_cfg-1.10.8.egg-info     rosmake-1.10.8.egg-info          rostest-1.9.50.egg-info
+gencpp-0.4.14.egg-info           rosclean/                        rosmaster/                       rostopic/
+genlisp/                         rosclean-1.10.8.egg-info         rosmaster-1.9.50.egg-info        rostopic-1.9.50.egg-info
+genlisp-0.4.12.egg-info          roscpp/                          rosmsg/                          rosunit/
+genmsg/                          roscreate/                       rosmsg-1.9.50.egg-info           rosunit-1.10.8.egg-info
+genmsg-0.4.23.egg-info           roscreate-1.10.8.egg-info        rosnode/                         roswtf/
+genpy/                           rosgraph/                        rosnode-1.9.50.egg-info          roswtf-1.9.50.egg-info
+genpy-0.4.14.egg-info            rosgraph-1.9.50.egg-info         rosparam/                        std_msgs/
+message_filters/                 rosgraph_msgs/                   rosparam-1.9.50.egg-info         std_srvs/
+message_filters-1.9.50.egg-info  roslaunch/                       rospy/                           topic_tools/
+ros/                             roslaunch-1.9.50.egg-info        rospy-1.9.50.egg-info            
+rosbag/                          roslib/                          rosservice/                      
+root@node1:/# sed -i "257        elif address.startswith('127.'):" /opt/ros/hydro/lib/python2.7/dist-packages/ros
+ros/                          roscreate/                    roslib-1.10.8.egg-info        rosnode-1.9.50.egg-info       rostest-1.9.50.egg-info
+rosbag/                       roscreate-1.10.8.egg-info     rosmake/                      rosparam/                     rostopic/
+rosbag-1.9.50.egg-info        rosgraph/                     rosmake-1.10.8.egg-info       rosparam-1.9.50.egg-info      rostopic-1.9.50.egg-info
+rosboost_cfg/                 rosgraph-1.9.50.egg-info      rosmaster/                    rospy/                        rosunit/
+rosboost_cfg-1.10.8.egg-info  rosgraph_msgs/                rosmaster-1.9.50.egg-info     rospy-1.9.50.egg-info         rosunit-1.10.8.egg-info
+rosclean/                     roslaunch/                    rosmsg/                       rosservice/                   roswtf/
+rosclean-1.10.8.egg-info      roslaunch-1.9.50.egg-info     rosmsg-1.9.50.egg-info        rosservice-1.9.50.egg-info    roswtf-1.9.50.egg-info
+roscpp/                       roslib/                       rosnode/                      rostest/                      
+root@node1:/# sed -i "257        elif address.startswith('127.'):" /opt/ros/hydro/lib/python2.7/dist-packages/rosgraph
+rosgraph/                 rosgraph-1.9.50.egg-info  rosgraph_msgs/            
+root@node1:/# sed -i "257        elif address.startswith('127.'):" /opt/ros/hydro/lib/python2.7/dist-packages/rosgraph/
+__init__.py        masterapi.py       names.pyc          rosenv.py          rosgraph_main.pyc  xmlrpc.py          
+__init__.pyc       masterapi.pyc      network.py         rosenv.pyc         roslogging.py      xmlrpc.pyc         
+impl/              names.py           network.pyc        rosgraph_main.py   roslogging.pyc     
+root@node1:/# sed -i "257        elif address.startswith('127.'):" /opt/ros/hydro/lib/python2.7/dist-packages/rosgraph/network.py
+/bin/sh: 1: Syntax error: "(" unexpected
+root@node1:/# sed -i '257        elif address.startswith("127."):' /opt/ros/hydro/lib/python2.7/dist-packages/rosgraph/network.py
+/bin/sh: 1: Syntax error: "(" unexpected
+root@node1:/# sed -i '257        elif address.startswith\("127."\):' /opt/ros/hydro/lib/python2.7/dist-packages/rosgraph/network.py
+/bin/sh: 1: Syntax error: "(" unexpected
+root@node1:/# sed -i '257        elif address.startswith("127."):' /opt/ros/hydro/lib/python2.7/dist-packages/rosgraph/network.py
+/bin/sh: 1: Syntax error: "(" unexpected
+root@node1:/# sed '257        elif address.startswith("127."):' /opt/ros/hydro/lib/python2.7/dist-packages/rosgraph/network.py
+# Software License Agreement (BSD License)
+#
+# Copyright (c) 2008, Willow Garage, Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+#
+#  * Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#  * Redistributions in binary form must reproduce the above
+#    copyright notice, this list of conditions and the following
+#    disclaimer in the documentation and/or other materials provided
+#    with the distribution.
+#  * Neither the name of Willow Garage, Inc. nor the names of its
+#    contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+# FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+# COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+# CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# Revision $Id: network.py 15125 2011-10-06 02:51:15Z kwc $
+
+"""
+Network APIs for ROS-based systems, including IP address and ROS
+TCP header libraries. Because ROS-based runtimes must respect the
+ROS_IP and ROS_HOSTNAME environment variables, ROS-specific APIs
+are necessary for correctly retrieving local IP address
+information.
+"""
+
+import logging
+import os
+import socket
+import struct
+import sys
+import platform
+
+try:
+    from cStringIO import StringIO #Python 2.x
+    python3 = 0
+except ImportError:
+    from io import BytesIO #Python 3.x
+    python3 = 1
+
+try:
+    import urllib.parse as urlparse
+except ImportError:
+    import urlparse
+
+from .rosenv import ROS_IP, ROS_HOSTNAME, ROS_IPV6
+
+SIOCGIFCONF = 0x8912
+SIOCGIFADDR = 0x8915
+if platform.system() == 'FreeBSD':
+    SIOCGIFADDR = 0xc0206921
+    if platform.architecture()[0] == '64bit':
+        SIOCGIFCONF = 0xc0106924
+    else:
+        SIOCGIFCONF = 0xc0086924
+
+logger = logging.getLogger('rosgraph.network')
+
+def parse_http_host_and_port(url):
+    """
+    Convenience routine to handle parsing and validation of HTTP URL
+    port due to the fact that Python only provides easy accessors in
+    Python 2.5 and later. Validation checks that the protocol and host
+    are set.
+    
+    :param url: URL to parse, ``str``
+    :returns: hostname and port number in URL or 80 (default), ``(str, int)``
+    :raises: :exc:`ValueError` If the url does not validate
+    """
+    # can't use p.port because that's only available in Python 2.5
+    if not url:
+        raise ValueError('not a valid URL')        
+    p = urlparse.urlparse(url)
+    if not p[0] or not p[1]: #protocol and host
+        raise ValueError('not a valid URL')
+    if ':' in p[1]:
+        hostname, port = p[1].split(':')
+        port = int(port)
+    else: 
+        hostname, port = p[1], 80
+    return hostname, port
+    
+def _is_unix_like_platform():
+    """
+    :returns: true if the platform conforms to UNIX/POSIX-style APIs
+    @rtype: bool
+    """
+    #return platform.system() in ['Linux', 'Mac OS X', 'Darwin']
+    return platform.system() in ['Linux', 'FreeBSD']
+
+def get_address_override():
+    """
+    :returns: ROS_IP/ROS_HOSTNAME override or None, ``str``
+    :raises: :exc:`ValueError` If ROS_IP/ROS_HOSTNAME/__ip/__hostname are invalidly specified
+    """
+    # #998: check for command-line remappings first
+    # TODO IPV6: check for compatibility
+    for arg in sys.argv:
+        if arg.startswith('__hostname:=') or arg.startswith('__ip:='):
+            try:
+                _, val = arg.split(':=')
+                return val
+            except: #split didn't unpack properly
+                raise ValueError("invalid ROS command-line remapping argument '%s'"%arg)
+
+    # check ROS_HOSTNAME and ROS_IP environment variables, which are
+    # aliases for each other
+    if ROS_HOSTNAME in os.environ:
+        hostname = os.environ[ROS_HOSTNAME]
+        if hostname == '':
+            msg = 'invalid ROS_HOSTNAME (an empty string)'
+            sys.stderr.write(msg + '\n')
+            logger.warn(msg)
+        else:
+            parts = urlparse.urlparse(hostname)
+            if parts.scheme:
+                msg = 'invalid ROS_HOSTNAME (protocol ' + ('and port ' if parts.port else '') + 'should not be included)'
+                sys.stderr.write(msg + '\n')
+                logger.warn(msg)
+            elif hostname.find(':') != -1:
+                # this can not be checked with urlparse()
+                # since it does not extract the port for a hostname like "foo:1234"
+                msg = 'invalid ROS_HOSTNAME (port should not be included)'
+                sys.stderr.write(msg + '\n')
+                logger.warn(msg)
+        return hostname
+    elif ROS_IP in os.environ:
+        ip = os.environ[ROS_IP]
+        if ip == '':
+            msg = 'invalid ROS_IP (an empty string)'
+            sys.stderr.write(msg + '\n')
+            logger.warn(msg)
+        elif ip.find('://') != -1:
+            msg = 'invalid ROS_IP (protocol should not be included)'
+            sys.stderr.write(msg + '\n')
+            logger.warn(msg)
+        elif ip.find('.') != -1 and ip.rfind(':') > ip.rfind('.'):
+            msg = 'invalid ROS_IP (port should not be included)'
+            sys.stderr.write(msg + '\n')
+            logger.warn(msg)
+        elif ip.find('.') == -1 and ip.find(':') == -1:
+            msg = 'invalid ROS_IP (must be a valid IPv4 or IPv6 address)'
+            sys.stderr.write(msg + '\n')
+            logger.warn(msg)
+        return ip
+    return None
+
+def is_local_address(hostname):
+    """
+    :param hostname: host name/address, ``str``
+    :returns True: if hostname maps to a local address, False otherwise. False conditions include invalid hostnames.
+    """
+    try:
+        reverse_ips = [host[4][0] for host in socket.getaddrinfo(hostname, 0, 0, 0, socket.SOL_TCP)]
+    except socket.error:
+        return False
+    local_addresses = ['localhost'] + get_local_addresses()
+    # 127. check is due to #1260
+    if ([ip for ip in reverse_ips if (ip.startswith('127.') or ip == '::1')] != []) or (set(reverse_ips) & set(local_addresses) != set()):
+        return True
+    return False
+    
+def get_local_address():
+    """
+    :returns: default local IP address (e.g. eth0). May be overriden by ROS_IP/ROS_HOSTNAME/__ip/__hostname, ``str``
+    """
+    override = get_address_override()
+    if override:
+        return override
+    addrs = get_local_addresses()
+    if len(addrs) == 1:
+        return addrs[0]
+    for addr in addrs:
+        # pick first non 127/8 address
+        if not addr.startswith('127.') and not addr == '::1':
+            return addr
+    else: # loopback
+        if use_ipv6():
+            return '::1'
+        else:
+            return '127.0.0.1'
+
+# cache for performance reasons
+_local_addrs = None
+def get_local_addresses():
+    """
+    :returns: known local addresses. Not affected by ROS_IP/ROS_HOSTNAME, ``[str]``
+    """
+    # cache address data as it can be slow to calculate
+    global _local_addrs
+    if _local_addrs is not None:
+        return _local_addrs
+
+    local_addrs = None
+    if _is_unix_like_platform():
+        # unix-only branch
+        v4addrs = []
+        v6addrs = []
+        import netifaces
+        for iface in netifaces.interfaces():
+            try:
+                ifaddrs = netifaces.ifaddresses(iface)
+            except ValueError:
+                # even if interfaces() returns an interface name
+                # ifaddresses() might raise a ValueError
+                # https://bugs.launchpad.net/ubuntu/+source/netifaces/+bug/753009
+                continue
+            if socket.AF_INET in ifaddrs:
+                v4addrs.extend([addr['addr'] for addr in ifaddrs[socket.AF_INET]])
+            if socket.AF_INET6 in ifaddrs:
+                v6addrs.extend([addr['addr'] for addr in ifaddrs[socket.AF_INET6]])
+        if use_ipv6():
+            local_addrs = v6addrs + v4addrs
+        else:
+            local_addrs = v4addrs
+    else:
+        # cross-platform branch, can only resolve one address
+        if use_ipv6():
+            local_addrs = [host[4][0] for host in socket.getaddrinfo(socket.gethostname(), 0, 0, 0, socket.SOL_TCP)]
+        else:
+            local_addrs = [host[4][0] for host in socket.getaddrinfo(socket.gethostname(), 0, socket.AF_INET, 0, socket.SOL_TCP)]
+    _local_addrs = local_addrs
+    return local_addrs
+
+def use_ipv6():
+    return ROS_IPV6 in os.environ and os.environ[ROS_IPV6] == 'on'
+
+def get_bind_address(address=None):
+    """
+    :param address: (optional) address to compare against, ``str``
+    :returns: address TCP/IP sockets should use for binding. This is
+      generally 0.0.0.0, but if \a address or ROS_IP/ROS_HOSTNAME is set
+      to localhost it will return 127.0.0.1, ``str``
+    """
+    if address is None:
+        address = get_address_override()
+    if address and (address == 'localhost' or address.startswith('127.') or address == '::1' ):
+        #localhost or 127/8
+        if use_ipv6():
+            return '::1'
+/bin/sh: 1: Syntax error: "(" unexpected
+        else:
+            return '127.0.0.1' #loopback
+    else:
+        if use_ipv6():
+            return '::'
+        else:
+            return '0.0.0.0'
+
+# #528: semi-complicated logic for determining XML-RPC URI
+def get_host_name():
+    """
+    Determine host-name for use in host-name-based addressing (e.g. XML-RPC URIs):
+     - if ROS_IP/ROS_HOSTNAME is set, use that address
+     - if the hostname returns a non-localhost value, use that
+     - use whatever L{get_local_address()} returns
+    """
+    hostname = get_address_override()
+    if not hostname:
+        try:
+            hostname = socket.gethostname()
+        except:
+            pass
+        if not hostname or hostname == 'localhost' or hostname.startswith('127.'):
+            hostname = get_local_address()
+    return hostname
+
+def create_local_xmlrpc_uri(port):
+    """
+    Determine the XMLRPC URI for local servers. This handles the search
+    logic of checking ROS environment variables, the known hostname,
+    and local interface IP addresses to determine the best possible
+    URI.
+    
+    :param port: port that server is running on, ``int``
+    :returns: XMLRPC URI, ``str``
+    """
+    #TODO: merge logic in rosgraph.xmlrpc with this routine
+    # in the future we may not want to be locked to http protocol nor root path
+    return 'http://%s:%s/'%(get_host_name(), port)
+
+
+## handshake utils ###########################################
+
+class ROSHandshakeException(Exception):
+    """
+    Exception to represent errors decoding handshake
+    """
+    pass
+
+def decode_ros_handshake_header(header_str):
+    """
+    Decode serialized ROS handshake header into a Python dictionary
+
+    header is a list of string key=value pairs, each prefixed by a
+    4-byte length field. It is preceeded by a 4-byte length field for
+    the entire header.
+    
+    :param header_str: encoded header string. May contain extra data at the end, ``str``
+    :returns: key value pairs encoded in \a header_str, ``{str: str}``
+    """
+    (size, ) = struct.unpack('<I', header_str[0:4])
+    size += 4 # add in 4 to include size of size field
+    header_len = len(header_str)
+    if size > header_len:
+        raise ROSHandshakeException("Incomplete header. Expected %s bytes but only have %s"%((size+4), header_len))
+
+    d = {}
+    start = 4
+    while start < size:
+        (field_size, ) = struct.unpack('<I', header_str[start:start+4])
+        if field_size == 0:
+            raise ROSHandshakeException("Invalid 0-length handshake header field")
+        start += field_size + 4
+        if start > size:
+            raise ROSHandshakeException("Invalid line length in handshake header: %s"%size)
+        line = header_str[start-field_size:start]
+        
+        #python3 compatibility
+        if python3 == 1:
+            line = line.decode()
+        
+        idx = line.find("=")
+        if idx < 0:
+            raise ROSHandshakeException("Invalid line in handshake header: [%s]"%line)
+        key = line[:idx]
+        value = line[idx+1:]
+        d[key.strip()] = value
+    return d
+    
+def read_ros_handshake_header(sock, b, buff_size):
+    """
+    Read in tcpros header off the socket \a sock using buffer \a b.
+    
+    :param sock: socket must be in blocking mode, ``socket``
+    :param b: buffer to use, ``StringIO`` for Python2, ``BytesIO`` for Python 3
+    :param buff_size: incoming buffer size to use, ``int``
+    :returns: key value pairs encoded in handshake, ``{str: str}``
+    :raises: :exc:`ROSHandshakeException` If header format does not match expected
+    """
+    header_str = None
+    while not header_str:
+        d = sock.recv(buff_size)
+        if not d:
+            raise ROSHandshakeException("connection from sender terminated before handshake header received. %s bytes were received. Please check sender for additional details."%b.tell())
+        b.write(d)
+        btell = b.tell()
+        if btell > 4:
+            # most likely we will get the full header in the first recv, so
+            # not worth tiny optimizations possible here
+            bval = b.getvalue()
+            (size,) = struct.unpack('<I', bval[0:4])
+            if btell - 4 >= size:
+                header_str = bval
+                    
+                # memmove the remnants of the buffer back to the start
+                leftovers = bval[size+4:]
+                b.truncate(len(leftovers))
+                b.seek(0)
+                b.write(leftovers)
+                header_recvd = True
+                    
+    # process the header
+    return decode_ros_handshake_header(bval)
+
+def encode_ros_handshake_header(header):
+    """
+    Encode ROS handshake header as a byte string. Each header
+    field is a string key value pair. The encoded header is
+    prefixed by a length field, as is each field key/value pair.
+    key/value pairs a separated by a '=' equals sign.
+
+    FORMAT: (4-byte length + [4-byte field length + field=value ]*)
+
+    :param header: header field keys/values, ``dict``
+    :returns: header encoded as byte string, ``str``
+    """    
+    fields = ["%s=%s"%(k,v) for k,v in header.items()]
+    
+    # in the usual configuration, the error 'TypeError: can't concat bytes to str' appears:
+    if python3 == 0:
+        #python 2
+        s = ''.join(["%s%s"%(struct.pack('<I', len(f)), f) for f in fields])
+        return struct.pack('<I', len(s)) + s
+    else:
+        #python 3 
+        s = b''.join([(struct.pack('<I', len(f)) + f.encode("utf-8")) for f in fields])
+        return struct.pack('<I', len(s)) + s
+                                        
+def write_ros_handshake_header(sock, header):
+    """
+    Write ROS handshake header header to socket sock
+
+    :param sock: socket to write to (must be in blocking mode), ``socket.socket``
+    :param header: header field keys/values, ``{str : str}``
+    :returns: Number of bytes sent (for statistics), ``int``
+    """
+    s = encode_ros_handshake_header(header)
+    sock.sendall(s)
+    return len(s) #STATS
+    
+root@node1:/# clear
+
+root@node1:/# vi /opt/ros/hydro/
+.catkin         _setup_util.py  env.sh          include/        setup.bash      setup.zsh       
+.rosinstall     bin/            etc/            lib/            setup.sh        share/          
+root@node1:/# vi /opt/ros/hydro/lib/python2.7/dist-packages/rosgraph
+rosgraph/                 rosgraph-1.9.50.egg-info  rosgraph_msgs/            
+root@node1:/# vi /opt/ros/hydro/lib/python2.7/dist-packages/rosgraph/n
+names.py     names.pyc    network.py   network.pyc  
+root@node1:/# vi /opt/ros/hydro/lib/python2.7/dist-packages/rosgraph/network.py
+root@node1:/# sed '257        elif address.startswith("127."):' /opt/ros/hydro/lib/python2.7/dist-packages/rosgraph/network.py
+# Software License Agreement (BSD License)
+#
+# Copyright (c) 2008, Willow Garage, Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+#
+#  * Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#  * Redistributions in binary form must reproduce the above
+#    copyright notice, this list of conditions and the following
+#    disclaimer in the documentation and/or other materials provided
+#    with the distribution.
+#  * Neither the name of Willow Garage, Inc. nor the names of its
+#    contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+# FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+# COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+# CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# Revision $Id: network.py 15125 2011-10-06 02:51:15Z kwc $
+
+"""
+Network APIs for ROS-based systems, including IP address and ROS
+TCP header libraries. Because ROS-based runtimes must respect the
+ROS_IP and ROS_HOSTNAME environment variables, ROS-specific APIs
+are necessary for correctly retrieving local IP address
+information.
+"""
+
+import logging
+import os
+import socket
+import struct
+import sys
+import platform
+
+try:
+    from cStringIO import StringIO #Python 2.x
+    python3 = 0
+except ImportError:
+    from io import BytesIO #Python 3.x
+    python3 = 1
+
+try:
+    import urllib.parse as urlparse
+except ImportError:
+    import urlparse
+
+from .rosenv import ROS_IP, ROS_HOSTNAME, ROS_IPV6
+
+SIOCGIFCONF = 0x8912
+SIOCGIFADDR = 0x8915
+if platform.system() == 'FreeBSD':
+    SIOCGIFADDR = 0xc0206921
+    if platform.architecture()[0] == '64bit':
+        SIOCGIFCONF = 0xc0106924
+    else:
+        SIOCGIFCONF = 0xc0086924
+
+logger = logging.getLogger('rosgraph.network')
+
+def parse_http_host_and_port(url):
+    """
+    Convenience routine to handle parsing and validation of HTTP URL
+    port due to the fact that Python only provides easy accessors in
+    Python 2.5 and later. Validation checks that the protocol and host
+    are set.
+    
+    :param url: URL to parse, ``str``
+    :returns: hostname and port number in URL or 80 (default), ``(str, int)``
+    :raises: :exc:`ValueError` If the url does not validate
+    """
+    # can't use p.port because that's only available in Python 2.5
+    if not url:
+        raise ValueError('not a valid URL')        
+    p = urlparse.urlparse(url)
+    if not p[0] or not p[1]: #protocol and host
+        raise ValueError('not a valid URL')
+    if ':' in p[1]:
+        hostname, port = p[1].split(':')
+        port = int(port)
+    else: 
+        hostname, port = p[1], 80
+    return hostname, port
+    
+def _is_unix_like_platform():
+    """
+    :returns: true if the platform conforms to UNIX/POSIX-style APIs
+    @rtype: bool
+    """
+    #return platform.system() in ['Linux', 'Mac OS X', 'Darwin']
+    return platform.system() in ['Linux', 'FreeBSD']
+
+def get_address_override():
+    """
+    :returns: ROS_IP/ROS_HOSTNAME override or None, ``str``
+    :raises: :exc:`ValueError` If ROS_IP/ROS_HOSTNAME/__ip/__hostname are invalidly specified
+    """
+    # #998: check for command-line remappings first
+    # TODO IPV6: check for compatibility
+    for arg in sys.argv:
+        if arg.startswith('__hostname:=') or arg.startswith('__ip:='):
+            try:
+                _, val = arg.split(':=')
+                return val
+            except: #split didn't unpack properly
+                raise ValueError("invalid ROS command-line remapping argument '%s'"%arg)
+
+    # check ROS_HOSTNAME and ROS_IP environment variables, which are
+    # aliases for each other
+    if ROS_HOSTNAME in os.environ:
+        hostname = os.environ[ROS_HOSTNAME]
+        if hostname == '':
+            msg = 'invalid ROS_HOSTNAME (an empty string)'
+            sys.stderr.write(msg + '\n')
+            logger.warn(msg)
+        else:
+            parts = urlparse.urlparse(hostname)
+            if parts.scheme:
+                msg = 'invalid ROS_HOSTNAME (protocol ' + ('and port ' if parts.port else '') + 'should not be included)'
+                sys.stderr.write(msg + '\n')
+                logger.warn(msg)
+            elif hostname.find(':') != -1:
+                # this can not be checked with urlparse()
+                # since it does not extract the port for a hostname like "foo:1234"
+                msg = 'invalid ROS_HOSTNAME (port should not be included)'
+                sys.stderr.write(msg + '\n')
+                logger.warn(msg)
+        return hostname
+    elif ROS_IP in os.environ:
+        ip = os.environ[ROS_IP]
+        if ip == '':
+            msg = 'invalid ROS_IP (an empty string)'
+            sys.stderr.write(msg + '\n')
+            logger.warn(msg)
+        elif ip.find('://') != -1:
+            msg = 'invalid ROS_IP (protocol should not be included)'
+            sys.stderr.write(msg + '\n')
+            logger.warn(msg)
+        elif ip.find('.') != -1 and ip.rfind(':') > ip.rfind('.'):
+            msg = 'invalid ROS_IP (port should not be included)'
+            sys.stderr.write(msg + '\n')
+            logger.warn(msg)
+        elif ip.find('.') == -1 and ip.find(':') == -1:
+            msg = 'invalid ROS_IP (must be a valid IPv4 or IPv6 address)'
+            sys.stderr.write(msg + '\n')
+            logger.warn(msg)
+        return ip
+    return None
+
+def is_local_address(hostname):
+    """
+    :param hostname: host name/address, ``str``
+    :returns True: if hostname maps to a local address, False otherwise. False conditions include invalid hostnames.
+    """
+    try:
+        reverse_ips = [host[4][0] for host in socket.getaddrinfo(hostname, 0, 0, 0, socket.SOL_TCP)]
+    except socket.error:
+        return False
+    local_addresses = ['localhost'] + get_local_addresses()
+    # 127. check is due to #1260
+    if ([ip for ip in reverse_ips if (ip.startswith('127.') or ip == '::1')] != []) or (set(reverse_ips) & set(local_addresses) != set()):
+        return True
+    return False
+    
+def get_local_address():
+    """
+    :returns: default local IP address (e.g. eth0). May be overriden by ROS_IP/ROS_HOSTNAME/__ip/__hostname, ``str``
+    """
+    override = get_address_override()
+    if override:
+        return override
+    addrs = get_local_addresses()
+    if len(addrs) == 1:
+        return addrs[0]
+    for addr in addrs:
+        # pick first non 127/8 address
+        if not addr.startswith('127.') and not addr == '::1':
+            return addr
+    else: # loopback
+        if use_ipv6():
+            return '::1'
+        else:
+            return '127.0.0.1'
+
+# cache for performance reasons
+_local_addrs = None
+def get_local_addresses():
+    """
+    :returns: known local addresses. Not affected by ROS_IP/ROS_HOSTNAME, ``[str]``
+    """
+    # cache address data as it can be slow to calculate
+    global _local_addrs
+    if _local_addrs is not None:
+        return _local_addrs
+
+    local_addrs = None
+    if _is_unix_like_platform():
+        # unix-only branch
+        v4addrs = []
+        v6addrs = []
+        import netifaces
+        for iface in netifaces.interfaces():
+            try:
+                ifaddrs = netifaces.ifaddresses(iface)
+            except ValueError:
+                # even if interfaces() returns an interface name
+                # ifaddresses() might raise a ValueError
+                # https://bugs.launchpad.net/ubuntu/+source/netifaces/+bug/753009
+                continue
+            if socket.AF_INET in ifaddrs:
+                v4addrs.extend([addr['addr'] for addr in ifaddrs[socket.AF_INET]])
+            if socket.AF_INET6 in ifaddrs:
+                v6addrs.extend([addr['addr'] for addr in ifaddrs[socket.AF_INET6]])
+        if use_ipv6():
+            local_addrs = v6addrs + v4addrs
+        else:
+            local_addrs = v4addrs
+    else:
+        # cross-platform branch, can only resolve one address
+        if use_ipv6():
+            local_addrs = [host[4][0] for host in socket.getaddrinfo(socket.gethostname(), 0, 0, 0, socket.SOL_TCP)]
+        else:
+            local_addrs = [host[4][0] for host in socket.getaddrinfo(socket.gethostname(), 0, socket.AF_INET, 0, socket.SOL_TCP)]
+    _local_addrs = local_addrs
+    return local_addrs
+
+def use_ipv6():
+    return ROS_IPV6 in os.environ and os.environ[ROS_IPV6] == 'on'
+
+def get_bind_address(address=None):
+    """
+    :param address: (optional) address to compare against, ``str``
+    :returns: address TCP/IP sockets should use for binding. This is
+      generally 0.0.0.0, but if \a address or ROS_IP/ROS_HOSTNAME is set
+      to localhost it will return 127.0.0.1, ``str``
+    """
+    if address is None:
+        address = get_address_override()
+    if address and (address == 'localhost' or address.startswith('127.') or address == '::1' ):
+        #localhost or 127/8
+        if use_ipv6():
+            return '::1'
+/bin/sh: 1: Syntax error: "(" unexpected
+        else:
+            return '127.0.0.1' #loopback
+    else:
+        if use_ipv6():
+            return '::'
+        else:
+            return '0.0.0.0'
+
+# #528: semi-complicated logic for determining XML-RPC URI
+def get_host_name():
+    """
+    Determine host-name for use in host-name-based addressing (e.g. XML-RPC URIs):
+     - if ROS_IP/ROS_HOSTNAME is set, use that address
+     - if the hostname returns a non-localhost value, use that
+     - use whatever L{get_local_address()} returns
+    """
+    hostname = get_address_override()
+    if not hostname:
+        try:
+            hostname = socket.gethostname()
+        except:
+            pass
+        if not hostname or hostname == 'localhost' or hostname.startswith('127.'):
+            hostname = get_local_address()
+    return hostname
+
+def create_local_xmlrpc_uri(port):
+    """
+    Determine the XMLRPC URI for local servers. This handles the search
+    logic of checking ROS environment variables, the known hostname,
+    and local interface IP addresses to determine the best possible
+    URI.
+    
+    :param port: port that server is running on, ``int``
+    :returns: XMLRPC URI, ``str``
+    """
+    #TODO: merge logic in rosgraph.xmlrpc with this routine
+    # in the future we may not want to be locked to http protocol nor root path
+    return 'http://%s:%s/'%(get_host_name(), port)
+
+
+## handshake utils ###########################################
+
+class ROSHandshakeException(Exception):
+    """
+    Exception to represent errors decoding handshake
+    """
+    pass
+
+def decode_ros_handshake_header(header_str):
+    """
+    Decode serialized ROS handshake header into a Python dictionary
+
+    header is a list of string key=value pairs, each prefixed by a
+    4-byte length field. It is preceeded by a 4-byte length field for
+    the entire header.
+    
+    :param header_str: encoded header string. May contain extra data at the end, ``str``
+    :returns: key value pairs encoded in \a header_str, ``{str: str}``
+    """
+    (size, ) = struct.unpack('<I', header_str[0:4])
+    size += 4 # add in 4 to include size of size field
+    header_len = len(header_str)
+    if size > header_len:
+        raise ROSHandshakeException("Incomplete header. Expected %s bytes but only have %s"%((size+4), header_len))
+
+    d = {}
+    start = 4
+    while start < size:
+        (field_size, ) = struct.unpack('<I', header_str[start:start+4])
+        if field_size == 0:
+            raise ROSHandshakeException("Invalid 0-length handshake header field")
+        start += field_size + 4
+        if start > size:
+            raise ROSHandshakeException("Invalid line length in handshake header: %s"%size)
+        line = header_str[start-field_size:start]
+        
+        #python3 compatibility
+        if python3 == 1:
+            line = line.decode()
+        
+        idx = line.find("=")
+        if idx < 0:
+            raise ROSHandshakeException("Invalid line in handshake header: [%s]"%line)
+        key = line[:idx]
+        value = line[idx+1:]
+        d[key.strip()] = value
+    return d
+    
+def read_ros_handshake_header(sock, b, buff_size):
+    """
+    Read in tcpros header off the socket \a sock using buffer \a b.
+    
+    :param sock: socket must be in blocking mode, ``socket``
+    :param b: buffer to use, ``StringIO`` for Python2, ``BytesIO`` for Python 3
+    :param buff_size: incoming buffer size to use, ``int``
+    :returns: key value pairs encoded in handshake, ``{str: str}``
+    :raises: :exc:`ROSHandshakeException` If header format does not match expected
+    """
+    header_str = None
+    while not header_str:
+        d = sock.recv(buff_size)
+        if not d:
+            raise ROSHandshakeException("connection from sender terminated before handshake header received. %s bytes were received. Please check sender for additional details."%b.tell())
+        b.write(d)
+        btell = b.tell()
+        if btell > 4:
+            # most likely we will get the full header in the first recv, so
+            # not worth tiny optimizations possible here
+            bval = b.getvalue()
+            (size,) = struct.unpack('<I', bval[0:4])
+            if btell - 4 >= size:
+                header_str = bval
+                    
+                # memmove the remnants of the buffer back to the start
+                leftovers = bval[size+4:]
+                b.truncate(len(leftovers))
+                b.seek(0)
+                b.write(leftovers)
+                header_recvd = True
+                    
+    # process the header
+    return decode_ros_handshake_header(bval)
+
+def encode_ros_handshake_header(header):
+    """
+    Encode ROS handshake header as a byte string. Each header
+    field is a string key value pair. The encoded header is
+    prefixed by a length field, as is each field key/value pair.
+    key/value pairs a separated by a '=' equals sign.
+
+    FORMAT: (4-byte length + [4-byte field length + field=value ]*)
+
+    :param header: header field keys/values, ``dict``
+    :returns: header encoded as byte string, ``str``
+    """    
+    fields = ["%s=%s"%(k,v) for k,v in header.items()]
+    
+    # in the usual configuration, the error 'TypeError: can't concat bytes to str' appears:
+    if python3 == 0:
+        #python 2
+        s = ''.join(["%s%s"%(struct.pack('<I', len(f)), f) for f in fields])
+        return struct.pack('<I', len(s)) + s
+    else:
+        #python 3 
+        s = b''.join([(struct.pack('<I', len(f)) + f.encode("utf-8")) for f in fields])
+        return struct.pack('<I', len(s)) + s
+                                        
+def write_ros_handshake_header(sock, header):
+    """
+    Write ROS handshake header header to socket sock
+
+    :param sock: socket to write to (must be in blocking mode), ``socket.socket``
+    :param header: header field keys/values, ``{str : str}``
+    :returns: Number of bytes sent (for statistics), ``int``
+    """
+    s = encode_ros_handshake_header(header)
+    sock.sendall(s)
+    return len(s) #STATS
+    
+root@node1:/# vi /opt/ros/hydro/lib/python2.7/dist-packages/rosgraph/network.py
+root@node1:/# clear
+
+root@node1:/# sed '257i\        elif address.startswith("127."):' /opt/ros/hydro/lib/python2.7/dist-packages/rosgraph/network.py
+# Software License Agreement (BSD License)
+#
+# Copyright (c) 2008, Willow Garage, Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+#
+#  * Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#  * Redistributions in binary form must reproduce the above
+#    copyright notice, this list of conditions and the following
+#    disclaimer in the documentation and/or other materials provided
+#    with the distribution.
+#  * Neither the name of Willow Garage, Inc. nor the names of its
+#    contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+# FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+# COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+# CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# Revision $Id: network.py 15125 2011-10-06 02:51:15Z kwc $
+
+"""
+Network APIs for ROS-based systems, including IP address and ROS
+TCP header libraries. Because ROS-based runtimes must respect the
+ROS_IP and ROS_HOSTNAME environment variables, ROS-specific APIs
+are necessary for correctly retrieving local IP address
+information.
+"""
+
+import logging
+import os
+import socket
+import struct
+import sys
+import platform
+
+try:
+    from cStringIO import StringIO #Python 2.x
+    python3 = 0
+except ImportError:
+    from io import BytesIO #Python 3.x
+    python3 = 1
+
+try:
+    import urllib.parse as urlparse
+except ImportError:
+    import urlparse
+
+from .rosenv import ROS_IP, ROS_HOSTNAME, ROS_IPV6
+
+SIOCGIFCONF = 0x8912
+SIOCGIFADDR = 0x8915
+if platform.system() == 'FreeBSD':
+    SIOCGIFADDR = 0xc0206921
+    if platform.architecture()[0] == '64bit':
+        SIOCGIFCONF = 0xc0106924
+    else:
+        SIOCGIFCONF = 0xc0086924
+
+logger = logging.getLogger('rosgraph.network')
+
+def parse_http_host_and_port(url):
+    """
+    Convenience routine to handle parsing and validation of HTTP URL
+    port due to the fact that Python only provides easy accessors in
+    Python 2.5 and later. Validation checks that the protocol and host
+    are set.
+    
+    :param url: URL to parse, ``str``
+    :returns: hostname and port number in URL or 80 (default), ``(str, int)``
+    :raises: :exc:`ValueError` If the url does not validate
+    """
+    # can't use p.port because that's only available in Python 2.5
+    if not url:
+        raise ValueError('not a valid URL')        
+    p = urlparse.urlparse(url)
+    if not p[0] or not p[1]: #protocol and host
+        raise ValueError('not a valid URL')
+    if ':' in p[1]:
+        hostname, port = p[1].split(':')
+        port = int(port)
+    else: 
+        hostname, port = p[1], 80
+    return hostname, port
+    
+def _is_unix_like_platform():
+    """
+    :returns: true if the platform conforms to UNIX/POSIX-style APIs
+    @rtype: bool
+    """
+    #return platform.system() in ['Linux', 'Mac OS X', 'Darwin']
+    return platform.system() in ['Linux', 'FreeBSD']
+
+def get_address_override():
+    """
+    :returns: ROS_IP/ROS_HOSTNAME override or None, ``str``
+    :raises: :exc:`ValueError` If ROS_IP/ROS_HOSTNAME/__ip/__hostname are invalidly specified
+    """
+    # #998: check for command-line remappings first
+    # TODO IPV6: check for compatibility
+    for arg in sys.argv:
+        if arg.startswith('__hostname:=') or arg.startswith('__ip:='):
+            try:
+                _, val = arg.split(':=')
+                return val
+            except: #split didn't unpack properly
+                raise ValueError("invalid ROS command-line remapping argument '%s'"%arg)
+
+    # check ROS_HOSTNAME and ROS_IP environment variables, which are
+    # aliases for each other
+    if ROS_HOSTNAME in os.environ:
+        hostname = os.environ[ROS_HOSTNAME]
+        if hostname == '':
+            msg = 'invalid ROS_HOSTNAME (an empty string)'
+            sys.stderr.write(msg + '\n')
+            logger.warn(msg)
+        else:
+            parts = urlparse.urlparse(hostname)
+            if parts.scheme:
+                msg = 'invalid ROS_HOSTNAME (protocol ' + ('and port ' if parts.port else '') + 'should not be included)'
+                sys.stderr.write(msg + '\n')
+                logger.warn(msg)
+            elif hostname.find(':') != -1:
+                # this can not be checked with urlparse()
+                # since it does not extract the port for a hostname like "foo:1234"
+                msg = 'invalid ROS_HOSTNAME (port should not be included)'
+                sys.stderr.write(msg + '\n')
+                logger.warn(msg)
+        return hostname
+    elif ROS_IP in os.environ:
+        ip = os.environ[ROS_IP]
+        if ip == '':
+            msg = 'invalid ROS_IP (an empty string)'
+            sys.stderr.write(msg + '\n')
+            logger.warn(msg)
+        elif ip.find('://') != -1:
+            msg = 'invalid ROS_IP (protocol should not be included)'
+            sys.stderr.write(msg + '\n')
+            logger.warn(msg)
+        elif ip.find('.') != -1 and ip.rfind(':') > ip.rfind('.'):
+            msg = 'invalid ROS_IP (port should not be included)'
+            sys.stderr.write(msg + '\n')
+            logger.warn(msg)
+        elif ip.find('.') == -1 and ip.find(':') == -1:
+            msg = 'invalid ROS_IP (must be a valid IPv4 or IPv6 address)'
+            sys.stderr.write(msg + '\n')
+            logger.warn(msg)
+        return ip
+    return None
+
+def is_local_address(hostname):
+    """
+    :param hostname: host name/address, ``str``
+    :returns True: if hostname maps to a local address, False otherwise. False conditions include invalid hostnames.
+    """
+    try:
+        reverse_ips = [host[4][0] for host in socket.getaddrinfo(hostname, 0, 0, 0, socket.SOL_TCP)]
+    except socket.error:
+        return False
+    local_addresses = ['localhost'] + get_local_addresses()
+    # 127. check is due to #1260
+    if ([ip for ip in reverse_ips if (ip.startswith('127.') or ip == '::1')] != []) or (set(reverse_ips) & set(local_addresses) != set()):
+        return True
+    return False
+    
+def get_local_address():
+    """
+    :returns: default local IP address (e.g. eth0). May be overriden by ROS_IP/ROS_HOSTNAME/__ip/__hostname, ``str``
+    """
+    override = get_address_override()
+    if override:
+        return override
+    addrs = get_local_addresses()
+    if len(addrs) == 1:
+        return addrs[0]
+    for addr in addrs:
+        # pick first non 127/8 address
+        if not addr.startswith('127.') and not addr == '::1':
+            return addr
+    else: # loopback
+        if use_ipv6():
+            return '::1'
+        else:
+            return '127.0.0.1'
+
+# cache for performance reasons
+_local_addrs = None
+def get_local_addresses():
+    """
+    :returns: known local addresses. Not affected by ROS_IP/ROS_HOSTNAME, ``[str]``
+    """
+    # cache address data as it can be slow to calculate
+    global _local_addrs
+    if _local_addrs is not None:
+        return _local_addrs
+
+    local_addrs = None
+    if _is_unix_like_platform():
+        # unix-only branch
+        v4addrs = []
+        v6addrs = []
+        import netifaces
+        for iface in netifaces.interfaces():
+            try:
+                ifaddrs = netifaces.ifaddresses(iface)
+            except ValueError:
+                # even if interfaces() returns an interface name
+                # ifaddresses() might raise a ValueError
+                # https://bugs.launchpad.net/ubuntu/+source/netifaces/+bug/753009
+                continue
+            if socket.AF_INET in ifaddrs:
+                v4addrs.extend([addr['addr'] for addr in ifaddrs[socket.AF_INET]])
+            if socket.AF_INET6 in ifaddrs:
+                v6addrs.extend([addr['addr'] for addr in ifaddrs[socket.AF_INET6]])
+        if use_ipv6():
+            local_addrs = v6addrs + v4addrs
+        else:
+            local_addrs = v4addrs
+    else:
+        # cross-platform branch, can only resolve one address
+        if use_ipv6():
+            local_addrs = [host[4][0] for host in socket.getaddrinfo(socket.gethostname(), 0, 0, 0, socket.SOL_TCP)]
+        else:
+            local_addrs = [host[4][0] for host in socket.getaddrinfo(socket.gethostname(), 0, socket.AF_INET, 0, socket.SOL_TCP)]
+    _local_addrs = local_addrs
+    return local_addrs
+
+def use_ipv6():
+    return ROS_IPV6 in os.environ and os.environ[ROS_IPV6] == 'on'
+
+def get_bind_address(address=None):
+    """
+    :param address: (optional) address to compare against, ``str``
+    :returns: address TCP/IP sockets should use for binding. This is
+      generally 0.0.0.0, but if \a address or ROS_IP/ROS_HOSTNAME is set
+      to localhost it will return 127.0.0.1, ``str``
+    """
+    if address is None:
+        address = get_address_override()
+    if address and (address == 'localhost' or address.startswith('127.') or address == '::1' ):
+        #localhost or 127/8
+        if use_ipv6():
+            return '::1'
+        elif address.startswith("127."):
+        else:
+            return '127.0.0.1' #loopback
+    else:
+        if use_ipv6():
+            return '::'
+        else:
+            return '0.0.0.0'
+
+# #528: semi-complicated logic for determining XML-RPC URI
+def get_host_name():
+    """
+    Determine host-name for use in host-name-based addressing (e.g. XML-RPC URIs):
+     - if ROS_IP/ROS_HOSTNAME is set, use that address
+     - if the hostname returns a non-localhost value, use that
+     - use whatever L{get_local_address()} returns
+    """
+    hostname = get_address_override()
+    if not hostname:
+        try:
+            hostname = socket.gethostname()
+        except:
+            pass
+        if not hostname or hostname == 'localhost' or hostname.startswith('127.'):
+            hostname = get_local_address()
+    return hostname
+
+def create_local_xmlrpc_uri(port):
+    """
+    Determine the XMLRPC URI for local servers. This handles the search
+    logic of checking ROS environment variables, the known hostname,
+    and local interface IP addresses to determine the best possible
+    URI.
+    
+    :param port: port that server is running on, ``int``
+    :returns: XMLRPC URI, ``str``
+    """
+    #TODO: merge logic in rosgraph.xmlrpc with this routine
+    # in the future we may not want to be locked to http protocol nor root path
+    return 'http://%s:%s/'%(get_host_name(), port)
+
+
+## handshake utils ###########################################
+
+class ROSHandshakeException(Exception):
+    """
+    Exception to represent errors decoding handshake
+    """
+    pass
+
+def decode_ros_handshake_header(header_str):
+    """
+    Decode serialized ROS handshake header into a Python dictionary
+
+    header is a list of string key=value pairs, each prefixed by a
+    4-byte length field. It is preceeded by a 4-byte length field for
+    the entire header.
+    
+    :param header_str: encoded header string. May contain extra data at the end, ``str``
+    :returns: key value pairs encoded in \a header_str, ``{str: str}``
+    """
+    (size, ) = struct.unpack('<I', header_str[0:4])
+    size += 4 # add in 4 to include size of size field
+    header_len = len(header_str)
+    if size > header_len:
+        raise ROSHandshakeException("Incomplete header. Expected %s bytes but only have %s"%((size+4), header_len))
+
+    d = {}
+    start = 4
+    while start < size:
+        (field_size, ) = struct.unpack('<I', header_str[start:start+4])
+        if field_size == 0:
+            raise ROSHandshakeException("Invalid 0-length handshake header field")
+        start += field_size + 4
+        if start > size:
+            raise ROSHandshakeException("Invalid line length in handshake header: %s"%size)
+        line = header_str[start-field_size:start]
+        
+        #python3 compatibility
+        if python3 == 1:
+            line = line.decode()
+        
+        idx = line.find("=")
+        if idx < 0:
+            raise ROSHandshakeException("Invalid line in handshake header: [%s]"%line)
+        key = line[:idx]
+        value = line[idx+1:]
+        d[key.strip()] = value
+    return d
+    
+def read_ros_handshake_header(sock, b, buff_size):
+    """
+    Read in tcpros header off the socket \a sock using buffer \a b.
+    
+    :param sock: socket must be in blocking mode, ``socket``
+    :param b: buffer to use, ``StringIO`` for Python2, ``BytesIO`` for Python 3
+    :param buff_size: incoming buffer size to use, ``int``
+    :returns: key value pairs encoded in handshake, ``{str: str}``
+    :raises: :exc:`ROSHandshakeException` If header format does not match expected
+    """
+    header_str = None
+    while not header_str:
+        d = sock.recv(buff_size)
+        if not d:
+            raise ROSHandshakeException("connection from sender terminated before handshake header received. %s bytes were received. Please check sender for additional details."%b.tell())
+        b.write(d)
+        btell = b.tell()
+        if btell > 4:
+            # most likely we will get the full header in the first recv, so
+            # not worth tiny optimizations possible here
+            bval = b.getvalue()
+            (size,) = struct.unpack('<I', bval[0:4])
+            if btell - 4 >= size:
+                header_str = bval
+                    
+                # memmove the remnants of the buffer back to the start
+                leftovers = bval[size+4:]
+                b.truncate(len(leftovers))
+                b.seek(0)
+                b.write(leftovers)
+                header_recvd = True
+                    
+    # process the header
+    return decode_ros_handshake_header(bval)
+
+def encode_ros_handshake_header(header):
+    """
+    Encode ROS handshake header as a byte string. Each header
+    field is a string key value pair. The encoded header is
+    prefixed by a length field, as is each field key/value pair.
+    key/value pairs a separated by a '=' equals sign.
+
+    FORMAT: (4-byte length + [4-byte field length + field=value ]*)
+
+    :param header: header field keys/values, ``dict``
+    :returns: header encoded as byte string, ``str``
+    """    
+    fields = ["%s=%s"%(k,v) for k,v in header.items()]
+    
+    # in the usual configuration, the error 'TypeError: can't concat bytes to str' appears:
+    if python3 == 0:
+        #python 2
+        s = ''.join(["%s%s"%(struct.pack('<I', len(f)), f) for f in fields])
+        return struct.pack('<I', len(s)) + s
+    else:
+        #python 3 
+        s = b''.join([(struct.pack('<I', len(f)) + f.encode("utf-8")) for f in fields])
+        return struct.pack('<I', len(s)) + s
+                                        
+def write_ros_handshake_header(sock, header):
+    """
+    Write ROS handshake header header to socket sock
+
+    :param sock: socket to write to (must be in blocking mode), ``socket.socket``
+    :param header: header field keys/values, ``{str : str}``
+    :returns: Number of bytes sent (for statistics), ``int``
+    """
+    s = encode_ros_handshake_header(header)
+    sock.sendall(s)
+    return len(s) #STATS
+    
+root@node1:/# vi /opt/ros/hydro/lib/python2.7/dist-packages/rosgraph/network.py
+root@node1:/# sed '257i\        elif address.startswith("127."):' /opt/ros/hydro/lib/python2.7/dist-packages/rosgraph/network.py
+# Software License Agreement (BSD License)
+#
+# Copyright (c) 2008, Willow Garage, Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+#
+#  * Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#  * Redistributions in binary form must reproduce the above
+#    copyright notice, this list of conditions and the following
+#    disclaimer in the documentation and/or other materials provided
+#    with the distribution.
+#  * Neither the name of Willow Garage, Inc. nor the names of its
+#    contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+# FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+# COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+# CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# Revision $Id: network.py 15125 2011-10-06 02:51:15Z kwc $
+
+"""
+Network APIs for ROS-based systems, including IP address and ROS
+TCP header libraries. Because ROS-based runtimes must respect the
+ROS_IP and ROS_HOSTNAME environment variables, ROS-specific APIs
+are necessary for correctly retrieving local IP address
+information.
+"""
+
+import logging
+import os
+import socket
+import struct
+import sys
+import platform
+
+try:
+    from cStringIO import StringIO #Python 2.x
+    python3 = 0
+except ImportError:
+    from io import BytesIO #Python 3.x
+    python3 = 1
+
+try:
+    import urllib.parse as urlparse
+except ImportError:
+    import urlparse
+
+from .rosenv import ROS_IP, ROS_HOSTNAME, ROS_IPV6
+
+SIOCGIFCONF = 0x8912
+SIOCGIFADDR = 0x8915
+if platform.system() == 'FreeBSD':
+    SIOCGIFADDR = 0xc0206921
+    if platform.architecture()[0] == '64bit':
+        SIOCGIFCONF = 0xc0106924
+    else:
+        SIOCGIFCONF = 0xc0086924
+
+logger = logging.getLogger('rosgraph.network')
+
+def parse_http_host_and_port(url):
+    """
+    Convenience routine to handle parsing and validation of HTTP URL
+    port due to the fact that Python only provides easy accessors in
+    Python 2.5 and later. Validation checks that the protocol and host
+    are set.
+    
+    :param url: URL to parse, ``str``
+    :returns: hostname and port number in URL or 80 (default), ``(str, int)``
+    :raises: :exc:`ValueError` If the url does not validate
+    """
+    # can't use p.port because that's only available in Python 2.5
+    if not url:
+        raise ValueError('not a valid URL')        
+    p = urlparse.urlparse(url)
+    if not p[0] or not p[1]: #protocol and host
+        raise ValueError('not a valid URL')
+    if ':' in p[1]:
+        hostname, port = p[1].split(':')
+        port = int(port)
+    else: 
+        hostname, port = p[1], 80
+    return hostname, port
+    
+def _is_unix_like_platform():
+    """
+    :returns: true if the platform conforms to UNIX/POSIX-style APIs
+    @rtype: bool
+    """
+    #return platform.system() in ['Linux', 'Mac OS X', 'Darwin']
+    return platform.system() in ['Linux', 'FreeBSD']
+
+def get_address_override():
+    """
+    :returns: ROS_IP/ROS_HOSTNAME override or None, ``str``
+    :raises: :exc:`ValueError` If ROS_IP/ROS_HOSTNAME/__ip/__hostname are invalidly specified
+    """
+    # #998: check for command-line remappings first
+    # TODO IPV6: check for compatibility
+    for arg in sys.argv:
+        if arg.startswith('__hostname:=') or arg.startswith('__ip:='):
+            try:
+                _, val = arg.split(':=')
+                return val
+            except: #split didn't unpack properly
+                raise ValueError("invalid ROS command-line remapping argument '%s'"%arg)
+
+    # check ROS_HOSTNAME and ROS_IP environment variables, which are
+    # aliases for each other
+    if ROS_HOSTNAME in os.environ:
+        hostname = os.environ[ROS_HOSTNAME]
+        if hostname == '':
+            msg = 'invalid ROS_HOSTNAME (an empty string)'
+            sys.stderr.write(msg + '\n')
+            logger.warn(msg)
+        else:
+            parts = urlparse.urlparse(hostname)
+            if parts.scheme:
+                msg = 'invalid ROS_HOSTNAME (protocol ' + ('and port ' if parts.port else '') + 'should not be included)'
+                sys.stderr.write(msg + '\n')
+                logger.warn(msg)
+            elif hostname.find(':') != -1:
+                # this can not be checked with urlparse()
+                # since it does not extract the port for a hostname like "foo:1234"
+                msg = 'invalid ROS_HOSTNAME (port should not be included)'
+                sys.stderr.write(msg + '\n')
+                logger.warn(msg)
+        return hostname
+    elif ROS_IP in os.environ:
+        ip = os.environ[ROS_IP]
+        if ip == '':
+            msg = 'invalid ROS_IP (an empty string)'
+            sys.stderr.write(msg + '\n')
+            logger.warn(msg)
+        elif ip.find('://') != -1:
+            msg = 'invalid ROS_IP (protocol should not be included)'
+            sys.stderr.write(msg + '\n')
+            logger.warn(msg)
+        elif ip.find('.') != -1 and ip.rfind(':') > ip.rfind('.'):
+            msg = 'invalid ROS_IP (port should not be included)'
+            sys.stderr.write(msg + '\n')
+            logger.warn(msg)
+        elif ip.find('.') == -1 and ip.find(':') == -1:
+            msg = 'invalid ROS_IP (must be a valid IPv4 or IPv6 address)'
+            sys.stderr.write(msg + '\n')
+            logger.warn(msg)
+        return ip
+    return None
+
+def is_local_address(hostname):
+    """
+    :param hostname: host name/address, ``str``
+    :returns True: if hostname maps to a local address, False otherwise. False conditions include invalid hostnames.
+    """
+    try:
+        reverse_ips = [host[4][0] for host in socket.getaddrinfo(hostname, 0, 0, 0, socket.SOL_TCP)]
+    except socket.error:
+        return False
+    local_addresses = ['localhost'] + get_local_addresses()
+    # 127. check is due to #1260
+    if ([ip for ip in reverse_ips if (ip.startswith('127.') or ip == '::1')] != []) or (set(reverse_ips) & set(local_addresses) != set()):
+        return True
+    return False
+    
+def get_local_address():
+    """
+    :returns: default local IP address (e.g. eth0). May be overriden by ROS_IP/ROS_HOSTNAME/__ip/__hostname, ``str``
+    """
+    override = get_address_override()
+    if override:
+        return override
+    addrs = get_local_addresses()
+    if len(addrs) == 1:
+        return addrs[0]
+    for addr in addrs:
+        # pick first non 127/8 address
+        if not addr.startswith('127.') and not addr == '::1':
+            return addr
+    else: # loopback
+        if use_ipv6():
+            return '::1'
+        else:
+            return '127.0.0.1'
+
+# cache for performance reasons
+_local_addrs = None
+def get_local_addresses():
+    """
+    :returns: known local addresses. Not affected by ROS_IP/ROS_HOSTNAME, ``[str]``
+    """
+    # cache address data as it can be slow to calculate
+    global _local_addrs
+    if _local_addrs is not None:
+        return _local_addrs
+
+    local_addrs = None
+    if _is_unix_like_platform():
+        # unix-only branch
+        v4addrs = []
+        v6addrs = []
+        import netifaces
+        for iface in netifaces.interfaces():
+            try:
+                ifaddrs = netifaces.ifaddresses(iface)
+            except ValueError:
+                # even if interfaces() returns an interface name
+                # ifaddresses() might raise a ValueError
+                # https://bugs.launchpad.net/ubuntu/+source/netifaces/+bug/753009
+                continue
+            if socket.AF_INET in ifaddrs:
+                v4addrs.extend([addr['addr'] for addr in ifaddrs[socket.AF_INET]])
+            if socket.AF_INET6 in ifaddrs:
+                v6addrs.extend([addr['addr'] for addr in ifaddrs[socket.AF_INET6]])
+        if use_ipv6():
+            local_addrs = v6addrs + v4addrs
+        else:
+            local_addrs = v4addrs
+    else:
+        # cross-platform branch, can only resolve one address
+        if use_ipv6():
+            local_addrs = [host[4][0] for host in socket.getaddrinfo(socket.gethostname(), 0, 0, 0, socket.SOL_TCP)]
+        else:
+            local_addrs = [host[4][0] for host in socket.getaddrinfo(socket.gethostname(), 0, socket.AF_INET, 0, socket.SOL_TCP)]
+    _local_addrs = local_addrs
+    return local_addrs
+
+def use_ipv6():
+    return ROS_IPV6 in os.environ and os.environ[ROS_IPV6] == 'on'
+
+def get_bind_address(address=None):
+    """
+    :param address: (optional) address to compare against, ``str``
+    :returns: address TCP/IP sockets should use for binding. This is
+      generally 0.0.0.0, but if \a address or ROS_IP/ROS_HOSTNAME is set
+      to localhost it will return 127.0.0.1, ``str``
+    """
+    if address is None:
+        address = get_address_override()
+    if address and (address == 'localhost' or address.startswith('127.') or address == '::1' ):
+        #localhost or 127/8
+        if use_ipv6():
+            return '::1'
+        elif address.startswith("127."):
+        else:
+            return '127.0.0.1' #loopback
+    else:
+        if use_ipv6():
+            return '::'
+        else:
+            return '0.0.0.0'
+
+# #528: semi-complicated logic for determining XML-RPC URI
+def get_host_name():
+    """
+    Determine host-name for use in host-name-based addressing (e.g. XML-RPC URIs):
+     - if ROS_IP/ROS_HOSTNAME is set, use that address
+     - if the hostname returns a non-localhost value, use that
+     - use whatever L{get_local_address()} returns
+    """
+    hostname = get_address_override()
+    if not hostname:
+        try:
+            hostname = socket.gethostname()
+        except:
+            pass
+        if not hostname or hostname == 'localhost' or hostname.startswith('127.'):
+            hostname = get_local_address()
+    return hostname
+
+def create_local_xmlrpc_uri(port):
+    """
+    Determine the XMLRPC URI for local servers. This handles the search
+    logic of checking ROS environment variables, the known hostname,
+    and local interface IP addresses to determine the best possible
+    URI.
+    
+    :param port: port that server is running on, ``int``
+    :returns: XMLRPC URI, ``str``
+    """
+    #TODO: merge logic in rosgraph.xmlrpc with this routine
+    # in the future we may not want to be locked to http protocol nor root path
+    return 'http://%s:%s/'%(get_host_name(), port)
+
+
+## handshake utils ###########################################
+
+class ROSHandshakeException(Exception):
+    """
+    Exception to represent errors decoding handshake
+    """
+    pass
+
+def decode_ros_handshake_header(header_str):
+    """
+    Decode serialized ROS handshake header into a Python dictionary
+
+    header is a list of string key=value pairs, each prefixed by a
+    4-byte length field. It is preceeded by a 4-byte length field for
+    the entire header.
+    
+    :param header_str: encoded header string. May contain extra data at the end, ``str``
+    :returns: key value pairs encoded in \a header_str, ``{str: str}``
+    """
+    (size, ) = struct.unpack('<I', header_str[0:4])
+    size += 4 # add in 4 to include size of size field
+    header_len = len(header_str)
+    if size > header_len:
+        raise ROSHandshakeException("Incomplete header. Expected %s bytes but only have %s"%((size+4), header_len))
+
+    d = {}
+    start = 4
+    while start < size:
+        (field_size, ) = struct.unpack('<I', header_str[start:start+4])
+        if field_size == 0:
+            raise ROSHandshakeException("Invalid 0-length handshake header field")
+        start += field_size + 4
+        if start > size:
+            raise ROSHandshakeException("Invalid line length in handshake header: %s"%size)
+        line = header_str[start-field_size:start]
+        
+        #python3 compatibility
+        if python3 == 1:
+            line = line.decode()
+        
+        idx = line.find("=")
+        if idx < 0:
+            raise ROSHandshakeException("Invalid line in handshake header: [%s]"%line)
+        key = line[:idx]
+        value = line[idx+1:]
+        d[key.strip()] = value
+    return d
+    
+def read_ros_handshake_header(sock, b, buff_size):
+    """
+    Read in tcpros header off the socket \a sock using buffer \a b.
+    
+    :param sock: socket must be in blocking mode, ``socket``
+    :param b: buffer to use, ``StringIO`` for Python2, ``BytesIO`` for Python 3
+    :param buff_size: incoming buffer size to use, ``int``
+    :returns: key value pairs encoded in handshake, ``{str: str}``
+    :raises: :exc:`ROSHandshakeException` If header format does not match expected
+    """
+    header_str = None
+    while not header_str:
+        d = sock.recv(buff_size)
+        if not d:
+            raise ROSHandshakeException("connection from sender terminated before handshake header received. %s bytes were received. Please check sender for additional details."%b.tell())
+        b.write(d)
+        btell = b.tell()
+        if btell > 4:
+            # most likely we will get the full header in the first recv, so
+            # not worth tiny optimizations possible here
+            bval = b.getvalue()
+            (size,) = struct.unpack('<I', bval[0:4])
+            if btell - 4 >= size:
+                header_str = bval
+                    
+                # memmove the remnants of the buffer back to the start
+                leftovers = bval[size+4:]
+                b.truncate(len(leftovers))
+                b.seek(0)
+                b.write(leftovers)
+                header_recvd = True
+                    
+    # process the header
+    return decode_ros_handshake_header(bval)
+
+def encode_ros_handshake_header(header):
+    """
+    Encode ROS handshake header as a byte string. Each header
+    field is a string key value pair. The encoded header is
+    prefixed by a length field, as is each field key/value pair.
+    key/value pairs a separated by a '=' equals sign.
+
+    FORMAT: (4-byte length + [4-byte field length + field=value ]*)
+
+    :param header: header field keys/values, ``dict``
+    :returns: header encoded as byte string, ``str``
+    """    
+    fields = ["%s=%s"%(k,v) for k,v in header.items()]
+    
+    # in the usual configuration, the error 'TypeError: can't concat bytes to str' appears:
+    if python3 == 0:
+        #python 2
+        s = ''.join(["%s%s"%(struct.pack('<I', len(f)), f) for f in fields])
+        return struct.pack('<I', len(s)) + s
+    else:
+        #python 3 
+        s = b''.join([(struct.pack('<I', len(f)) + f.encode("utf-8")) for f in fields])
+        return struct.pack('<I', len(s)) + s
+                                        
+def write_ros_handshake_header(sock, header):
+    """
+    Write ROS handshake header header to socket sock
+
+    :param sock: socket to write to (must be in blocking mode), ``socket.socket``
+    :param header: header field keys/values, ``{str : str}``
+    :returns: Number of bytes sent (for statistics), ``int``
+    """
+    s = encode_ros_handshake_header(header)
+    sock.sendall(s)
+    return len(s) #STATS
+    
+root@node1:/# vi /opt/ros/hydro/lib/python2.7/dist-packages/rosgraph/network.py
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# 
+root@node1:/# sed '257i\        elif address.startswith("127."):' /opt/ros/hydro/lib/python2.7/dist-packages/rosgraph/network.py
+# Software License Agreement (BSD License)
+#
+# Copyright (c) 2008, Willow Garage, Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+#
+#  * Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#  * Redistributions in binary form must reproduce the above
+#    copyright notice, this list of conditions and the following
+#    disclaimer in the documentation and/or other materials provided
+#    with the distribution.
+#  * Neither the name of Willow Garage, Inc. nor the names of its
+#    contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+# FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+# COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+# CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# Revision $Id: network.py 15125 2011-10-06 02:51:15Z kwc $
+
+"""
+Network APIs for ROS-based systems, including IP address and ROS
+TCP header libraries. Because ROS-based runtimes must respect the
+ROS_IP and ROS_HOSTNAME environment variables, ROS-specific APIs
+are necessary for correctly retrieving local IP address
+information.
+"""
+
+import logging
+import os
+import socket
+import struct
+import sys
+import platform
+
+try:
+    from cStringIO import StringIO #Python 2.x
+    python3 = 0
+except ImportError:
+    from io import BytesIO #Python 3.x
+    python3 = 1
+
+try:
+    import urllib.parse as urlparse
+except ImportError:
+    import urlparse
+
+from .rosenv import ROS_IP, ROS_HOSTNAME, ROS_IPV6
+
+SIOCGIFCONF = 0x8912
+SIOCGIFADDR = 0x8915
+if platform.system() == 'FreeBSD':
+    SIOCGIFADDR = 0xc0206921
+    if platform.architecture()[0] == '64bit':
+        SIOCGIFCONF = 0xc0106924
+    else:
+        SIOCGIFCONF = 0xc0086924
+
+logger = logging.getLogger('rosgraph.network')
+
+def parse_http_host_and_port(url):
+    """
+    Convenience routine to handle parsing and validation of HTTP URL
+    port due to the fact that Python only provides easy accessors in
+    Python 2.5 and later. Validation checks that the protocol and host
+    are set.
+    
+    :param url: URL to parse, ``str``
+    :returns: hostname and port number in URL or 80 (default), ``(str, int)``
+    :raises: :exc:`ValueError` If the url does not validate
+    """
+    # can't use p.port because that's only available in Python 2.5
+    if not url:
+        raise ValueError('not a valid URL')        
+    p = urlparse.urlparse(url)
+    if not p[0] or not p[1]: #protocol and host
+        raise ValueError('not a valid URL')
+    if ':' in p[1]:
+        hostname, port = p[1].split(':')
+        port = int(port)
+    else: 
+        hostname, port = p[1], 80
+    return hostname, port
+    
+def _is_unix_like_platform():
+    """
+    :returns: true if the platform conforms to UNIX/POSIX-style APIs
+    @rtype: bool
+    """
+    #return platform.system() in ['Linux', 'Mac OS X', 'Darwin']
+    return platform.system() in ['Linux', 'FreeBSD']
+
+def get_address_override():
+    """
+    :returns: ROS_IP/ROS_HOSTNAME override or None, ``str``
+    :raises: :exc:`ValueError` If ROS_IP/ROS_HOSTNAME/__ip/__hostname are invalidly specified
+    """
+    # #998: check for command-line remappings first
+    # TODO IPV6: check for compatibility
+    for arg in sys.argv:
+        if arg.startswith('__hostname:=') or arg.startswith('__ip:='):
+            try:
+                _, val = arg.split(':=')
+                return val
+            except: #split didn't unpack properly
+                raise ValueError("invalid ROS command-line remapping argument '%s'"%arg)
+
+    # check ROS_HOSTNAME and ROS_IP environment variables, which are
+    # aliases for each other
+    if ROS_HOSTNAME in os.environ:
+        hostname = os.environ[ROS_HOSTNAME]
+        if hostname == '':
+            msg = 'invalid ROS_HOSTNAME (an empty string)'
+            sys.stderr.write(msg + '\n')
+            logger.warn(msg)
+        else:
+            parts = urlparse.urlparse(hostname)
+            if parts.scheme:
+                msg = 'invalid ROS_HOSTNAME (protocol ' + ('and port ' if parts.port else '') + 'should not be included)'
+                sys.stderr.write(msg + '\n')
+

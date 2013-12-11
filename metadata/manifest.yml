@@ -1,0 +1,32 @@
+Name: speech
+Cartridge-Short-Name: SPEECH
+Architecture: noarch
+Display-Name: speech
+Description: "Speech reconation tool"
+Version: '0.1.0'
+Versions: [0.1.0]
+Cartridge-Version: 0.1.0
+Cartridge-Vendor: worldline
+License: MIT License
+Vendor: Mit
+Categories:
+  - embedded
+  - application
+  - web_framework
+Website: http://proot.me/
+Provides:
+  - speech-reco
+Scaling:
+  Min: 1
+  Max: -1
+Publishes:
+  get-internal-uri:
+    Type: "NET_TCP:http"
+Endpoints:
+  - Private-IP-Name:   IP
+    Private-Port-Name: BRIDGE_HTTP
+    Private-Port:      10150
+    Public-Port-Name:  WEB_PROXY_PORT
+    Mappings:
+      - Frontend: ""
+        Options: {"websocket":true}
