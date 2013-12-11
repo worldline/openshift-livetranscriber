@@ -32,9 +32,9 @@ echo "#!/bin/bash"
 echo "export PATH=/usr/local/lib:/usr/local/bin:/sbin:/usr/local/:/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games" >> install.sh
 echo "export OPENSHIFT_SPEECH_REDIS_PORT=6379 ">> install.sh
 echo "apt-get -y update" >> install.sh 
-echo "apt-get -y install build-essential automake git" >> install.sh
+echo "apt-get -y install build-essential automake git libsqlite3-dev" >> install.sh
 #Pocketspinx
-echo "cd " >> install.sh
+echo "cd /tmp" >> install.sh
 echo "wget http://infos-sfenix.apps.zone52.org/sphinxbase-0.8.tar.gz" >> install.sh
 echo "tar xzf sphinxbase-0.8.tar.gz" >> install.sh
 echo "cd sphinxbase-0.8" >> install.sh
@@ -42,6 +42,7 @@ echo "./autogen.sh" >> install.sh
 echo "./configure" >> install.sh
 echo "make" >> install.sh
 echo "make install" >> install.sh
+echo "cd /tmp" >> install.sh
 echo "wget http://infos-sfenix.apps.zone52.org/pocketsphinx-0.8.tar.gz" >> install.sh
 echo "tar xzf pocketsphinx-0.8.tar.gz" >> install.sh
 echo "cd pocketsphinx-0.8" >> install.sh
@@ -62,9 +63,9 @@ echo "cd /tmp" >> install.sh
 echo "git clone http://github.com/rubygems/rubygems" >> install.sh
 echo "cd rubygems" >> install.sh
 echo "ruby setup.rb" >> install.sh
-echo "gem install bundler redis" >> install.sh
+echo "gem install bundler redis rake" >> install.sh
 echo "cd /root/" >> install.sh
-echo "git clone git://github.com/skpvox/LiveTranscriber" >> install.sh
+echo "git clone git://github.com/steffel/LiveTranscriber" >> install.sh
 echo "cd LiveTranscriber" >> install.sh
 echo "bundle install">> install.sh
 echo "port <%= ENV['OPENSHIFT_SPEECH_REDIS_PORT'] %>" >> /root/redis.conf.erb
@@ -73,17 +74,22 @@ echo "erb /root/redis.conf.erb >> /root/redis.conf">> install.sh
 echo "cd /tmp; " >> install.sh
 echo "wget http://files.kde.org/accessibility/Simon/lm/ensemble_cased.tar.bz2" >> install.sh
 echo "wget http://files.kde.org/accessibility/Simon/am/voxforge_en_sphinx.cd_cont_5000.tar.gz" >> install.sh
-echo "tar -xvzf ensemble_cased.tar.bz2" >> install.sh
+echo "tar -xjf ensemble_cased.tar.bz2" >> install.sh
 echo "tar -xvzf voxforge_en_sphinx.cd_cont_5000.tar.gz" >> install.sh
 echo "mkdir -p /root/LiveTranscriber/speech_recognition/models/{hidden_markov_model,dictionary,language_model}"
-echo "mv -r /tmp/voxforge_en_sphinx.cd_cont_5000 /root/LiveTranscriber/speech_recognition/models/hidden_markov_model/" >> install.sh
+echo "mv /tmp/voxforge_en_sphinx.cd_cont_5000 /root/LiveTranscriber/speech_recognition/models/hidden_markov_model/" >> install.sh
 echo "mv /tmp/ensemble_cased/ensemble_wiki_ng_se_so_subs_enron_congress_65k_pruned_huge_sorted_cased.lm /root/LiveTranscriber/speech_recognition/models/language_modellanguage_model/" >> install.sh
 echo "mv /tmp/ensemble_cased/ensemble_wiki_ng_se_so_subs_enron_congress_65k_pruned_huge_sorted_cased.lm.DMP /root/LiveTranscriber/speech_recognition/models/language_model/" >> install.sh
 echo "mv /tmp/ensemble_cased/essential-sane-65k.fullCased /root/LiveTranscriber/speech_recognition/models/dictionary/essential_sane_65k.fullCased" >> install.sh
+echo "rm /tmp/pocketsphinx-0.8/src/programs/continuous.c" >> install.sh
+echo "mv /root/LiveTranscriber/speech_recognition/tools/fatpocketsphinx/modified_continuous.c /tmp/pocketsphinx-0.8/src/programs/continuous.c" >> install.sh
+echo "cd /tmp/pocketsphinx-0.8" >>  install.sh
+echo "make clean" >> install.sh
+echo "make" >> install.sh
 echo "cd /root/LiveTranscriber/" >> install.sh
 echo "rake db:setup" >> install.sh
 echo "redis-server /root/redis.conf &" >> install.sh
-echo "puma -b tcp://$SPEECH:BRIDGE_HTTP" >> install.sh
+echo "puma -b tcp://$OPENSHIFT_SPEECH_IP:$OPENSHIFT_SPEECH_BRIDGE_HTTP" >> install.sh
 chmod +x install.sh
 # Start
 cd ..
