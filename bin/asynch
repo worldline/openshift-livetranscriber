@@ -32,8 +32,8 @@ echo "#!/bin/bash"
 echo "export PATH=/usr/local/lib:/usr/local/bin:/sbin:/usr/local/:/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games" >> install.sh
 echo "export OPENSHIFT_SPEECH_REDIS_PORT=10150 ">> install.sh
 echo "apt-get -y update" >> install.sh 
-echo "apt-get -y install build-essential libtool automake git libsqlite3-dev bison" >> install.sh
 #Pocketspinx
+echo "apt-get -y install build-essential libtool automake bison" >> install.sh
 echo "cd /tmp" >> install.sh
 echo "wget http://infos-sfenix.apps.zone52.org/sphinxbase-0.8.tar.gz" >> install.sh
 echo "tar xzf sphinxbase-0.8.tar.gz" >> install.sh
@@ -58,6 +58,7 @@ echo "cd redis-stable" >> install.sh
 echo "make" >> install.sh
 echo "make install" >> install.sh
 #Install LiveTranscriber
+echo "apt-get install -y libsqlite3-dev git"
 echo "apt-get install -y sox zlib1g-dev libssl-dev libreadline6-dev libyaml-dev" >> install.sh
 echo "cd /tmp" >> install.sh
 echo "wget http://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p247.tar.gz" >> install.sh
