@@ -24,15 +24,15 @@ echo "source /etc/environment" >> etc/bash.bashrc
 echo 'export PATH=/usr/local/lib:/usr/local/bin:/sbin:/usr/local/:/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games' >> etc/bash.bashrc
 echo "export HOME=/root" >> etc/bash.bashrc
 echo "export LC_ALL=C" >> etc/bash.bashrc
-echo "export OPENSHIFT_SPEECH_REDIS_PORT=6379 ">> etc/bash.bashrc
+echo "export OPENSHIFT_SPEECH_REDIS_PORT=10150 ">> etc/bash.bashrc
 rm -rf ubuntu-12.04-x86_64.tar.gz
 
 rm -rf install.sh
 echo "#!/bin/bash"
 echo "export PATH=/usr/local/lib:/usr/local/bin:/sbin:/usr/local/:/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games" >> install.sh
-echo "export OPENSHIFT_SPEECH_REDIS_PORT=6379 ">> install.sh
+echo "export OPENSHIFT_SPEECH_REDIS_PORT=10150 ">> install.sh
 echo "apt-get -y update" >> install.sh 
-echo "apt-get -y install build-essential libtool automake git libsqlite3-dev" >> install.sh
+echo "apt-get -y install build-essential libtool automake git libsqlite3-dev bison" >> install.sh
 #Pocketspinx
 echo "cd /tmp" >> install.sh
 echo "wget http://infos-sfenix.apps.zone52.org/sphinxbase-0.8.tar.gz" >> install.sh
@@ -48,6 +48,13 @@ echo "tar xzf pocketsphinx-0.8.tar.gz" >> install.sh
 echo "cd pocketsphinx-0.8" >> install.sh
 echo "./autogen.sh" >> install.sh
 echo "./configure" >> install.sh
+echo "make" >> install.sh
+echo "make install" >> install.sh
+# Redis
+echo "cd /tmp" >> install.sh
+echo "wget http://download.redis.io/redis-stable.tar.gz" >> install.sh
+echo "tar xvzf redis-stable.tar.gz" >> install.sh
+echo "cd redis-stable" >> install.sh
 echo "make" >> install.sh
 echo "make install" >> install.sh
 #Install LiveTranscriber
@@ -68,15 +75,15 @@ echo "cd /root/" >> install.sh
 echo "git clone git://github.com/steffel/LiveTranscriber" >> install.sh
 echo "cd LiveTranscriber" >> install.sh
 echo "bundle install">> install.sh
-echo "port <%= ENV['OPENSHIFT_SPEECH_REDIS_PORT'] %>" >> /root/redis.conf.erb
-echo "bind <%= ENV['OPENSHIFT_SPEECH_IP'] %>" >> /root/redis.conf.erb
+echo "echo 'port <%= ENV[\"OPENSHIFT_SPEECH_REDIS_PORT\"] %>' >> /root/redis.conf.erb">> install.sh
+echo "echo 'bind <%= ENV[\"OPENSHIFT_SPEECH_IP\"] %>' >> /root/redis.conf.erb">> install.sh
 echo "erb /root/redis.conf.erb >> /root/redis.conf">> install.sh
 echo "cd /tmp; " >> install.sh
 echo "wget http://files.kde.org/accessibility/Simon/lm/ensemble_cased.tar.bz2" >> install.sh
 echo "wget http://files.kde.org/accessibility/Simon/am/voxforge_en_sphinx.cd_cont_5000.tar.gz" >> install.sh
 echo "tar -xjf ensemble_cased.tar.bz2" >> install.sh
 echo "tar -xvzf voxforge_en_sphinx.cd_cont_5000.tar.gz" >> install.sh
-echo "mkdir -p /root/LiveTranscriber/speech_recognition/models/{hidden_markov_model,dictionary,language_model}"
+echo "mkdir -p /root/LiveTranscriber/speech_recognition/models/{hidden_markov_model,dictionary,language_model}" >> install.sh
 echo "mv /tmp/voxforge_en_sphinx.cd_cont_5000 /root/LiveTranscriber/speech_recognition/models/hidden_markov_model/" >> install.sh
 echo "mv /tmp/ensemble_cased/ensemble_wiki_ng_se_so_subs_enron_congress_65k_pruned_huge_sorted_cased.lm /root/LiveTranscriber/speech_recognition/models/language_modellanguage_model/" >> install.sh
 echo "mv /tmp/ensemble_cased/ensemble_wiki_ng_se_so_subs_enron_congress_65k_pruned_huge_sorted_cased.lm.DMP /root/LiveTranscriber/speech_recognition/models/language_model/" >> install.sh
