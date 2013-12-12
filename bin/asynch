@@ -73,7 +73,7 @@ echo "cd rubygems" >> install.sh
 echo "ruby setup.rb" >> install.sh
 echo "gem install bundler redis rake" >> install.sh
 echo "cd /root/" >> install.sh
-echo "git clone git://github.com/steffel/LiveTranscriber" >> install.sh
+echo "git clone git@github.com:steffel/LiveTranscriber.git" >> install.sh
 echo "cd LiveTranscriber" >> install.sh
 echo "bundle install">> install.sh
 echo "echo 'port <%= ENV[\"OPENSHIFT_SPEECH_REDIS_PORT\"] %>' >> /root/redis.conf.erb">> install.sh
