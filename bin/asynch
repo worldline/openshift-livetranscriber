@@ -92,7 +92,7 @@ echo "mv /tmp/ensemble_cased/ensemble_wiki_ng_se_so_subs_enron_congress_65k_prun
 echo "mv /tmp/ensemble_cased/ensemble_wiki_ng_se_so_subs_enron_congress_65k_pruned_huge_sorted_cased.lm.DMP /root/LiveTranscriber/speech_recognition/models/language_model/" >> install.sh
 echo "mv /tmp/ensemble_cased/essential-sane-65k.fullCased /root/LiveTranscriber/speech_recognition/models/dictionary/essential_sane_65k.fullCased" >> install.sh
 echo "rm /tmp/pocketsphinx-0.8/src/programs/continuous.c" >> install.sh
-echo "cp /root/LiveTranscriber/speech_recognition/tools/fatpocketsphinx/modified_continuous.c /tmp/pocketsphinx-0.8/src/programs/continuous.c" >> install.sh
+echo "cp /root/LiveTranscriber/speech_recognition/tools/fatpocketsphinx/modified_continous.c /tmp/pocketsphinx-0.8/src/programs/continuous.c" >> install.sh
 echo "cd /tmp/pocketsphinx-0.8" >>  install.sh
 echo "make clean" >> install.sh
 echo "./autogen.sh" >> install.sh
