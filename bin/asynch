@@ -58,7 +58,7 @@ echo "cd redis-stable" >> install.sh
 echo "make" >> install.sh
 echo "make install" >> install.sh
 #Install LiveTranscriber
-echo "apt-get install -y libsqlite3-dev git"
+echo "apt-get install -y libsqlite3-dev git" >> install.sh
 echo "apt-get install -y sox zlib1g-dev libssl-dev libreadline6-dev libyaml-dev" >> install.sh
 echo "cd /tmp" >> install.sh
 echo "wget http://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p247.tar.gz" >> install.sh
