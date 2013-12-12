@@ -25,7 +25,7 @@ Publishes:
 Endpoints:
   - Private-IP-Name:   IP
     Private-Port-Name: BRIDGE_HTTP
-    Private-Port:      10150
+    Private-Port:      201283
     Public-Port-Name:  WEB_PROXY_PORT
     Mappings:
       - Frontend: ""
