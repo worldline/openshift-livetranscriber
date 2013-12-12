@@ -84,7 +84,9 @@ echo "wget http://files.kde.org/accessibility/Simon/lm/ensemble_cased.tar.bz2" >
 echo "wget http://files.kde.org/accessibility/Simon/am/voxforge_en_sphinx.cd_cont_5000.tar.gz" >> install.sh
 echo "tar -xjf ensemble_cased.tar.bz2" >> install.sh
 echo "tar -xvzf voxforge_en_sphinx.cd_cont_5000.tar.gz" >> install.sh
-echo "mkdir -p /root/LiveTranscriber/speech_recognition/models/{hidden_markov_model,dictionary,language_model}" >> install.sh
+echo "mkdir -p /root/LiveTranscriber/speech_recognition/models/hidden_markov_model" >> install.sh
+echo "mkdir -p /root/LiveTranscriber/speech_recognition/models/dictionary" >> install.sh
+echo "mkdir -p /root/LiveTranscriber/speech_recognition/models/language_model" >> install.sh
 echo "mv /tmp/voxforge_en_sphinx.cd_cont_5000 /root/LiveTranscriber/speech_recognition/models/hidden_markov_model/" >> install.sh
 echo "mv /tmp/ensemble_cased/ensemble_wiki_ng_se_so_subs_enron_congress_65k_pruned_huge_sorted_cased.lm /root/LiveTranscriber/speech_recognition/models/language_modellanguage_model/" >> install.sh
 echo "mv /tmp/ensemble_cased/ensemble_wiki_ng_se_so_subs_enron_congress_65k_pruned_huge_sorted_cased.lm.DMP /root/LiveTranscriber/speech_recognition/models/language_model/" >> install.sh
