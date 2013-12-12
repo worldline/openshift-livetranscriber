@@ -95,6 +95,8 @@ echo "rm /tmp/pocketsphinx-0.8/src/programs/continuous.c" >> install.sh
 echo "mv /root/LiveTranscriber/speech_recognition/tools/fatpocketsphinx/modified_continuous.c /tmp/pocketsphinx-0.8/src/programs/continuous.c" >> install.sh
 echo "cd /tmp/pocketsphinx-0.8" >>  install.sh
 echo "make clean" >> install.sh
+echo "./autogen.sh" >> install.sh
+echo "./configure" >> install.sh
 echo "make" >> install.sh
 echo "cd /root/LiveTranscriber/" >> install.sh
 echo "rake db:setup" >> install.sh
