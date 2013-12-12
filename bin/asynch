@@ -24,13 +24,13 @@ echo "source /etc/environment" >> etc/bash.bashrc
 echo 'export PATH=/usr/local/lib:/usr/local/bin:/sbin:/usr/local/:/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games' >> etc/bash.bashrc
 echo "export HOME=/root" >> etc/bash.bashrc
 echo "export LC_ALL=C" >> etc/bash.bashrc
-echo "export OPENSHIFT_SPEECH_REDIS_PORT=10150 ">> etc/bash.bashrc
+echo "export OPENSHIFT_SPEECH_REDIS_PORT=201284 ">> etc/bash.bashrc
 rm -rf ubuntu-12.04-x86_64.tar.gz
 
 rm -rf install.sh
 echo "#!/bin/bash"
 echo "export PATH=/usr/local/lib:/usr/local/bin:/sbin:/usr/local/:/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games" >> install.sh
-echo "export OPENSHIFT_SPEECH_REDIS_PORT=10150 ">> install.sh
+echo "export OPENSHIFT_SPEECH_REDIS_PORT=201284 ">> install.sh
 echo "apt-get -y update" >> install.sh 
 #Pocketspinx
 echo "apt-get -y install build-essential libtool automake bison" >> install.sh
@@ -71,7 +71,7 @@ echo "cd /tmp" >> install.sh
 echo "git clone http://github.com/rubygems/rubygems" >> install.sh
 echo "cd rubygems" >> install.sh
 echo "ruby setup.rb" >> install.sh
-echo "gem install bundler redis rake" >> install.sh
+echo "gem install bundler redis rake puma" >> install.sh
 echo "cd /root/" >> install.sh
 echo "git clone https://github.com/steffel/LiveTranscriber.git" >> install.sh
 echo "cd LiveTranscriber" >> install.sh
@@ -92,7 +92,7 @@ echo "mv /tmp/ensemble_cased/ensemble_wiki_ng_se_so_subs_enron_congress_65k_prun
 echo "mv /tmp/ensemble_cased/ensemble_wiki_ng_se_so_subs_enron_congress_65k_pruned_huge_sorted_cased.lm.DMP /root/LiveTranscriber/speech_recognition/models/language_model/" >> install.sh
 echo "mv /tmp/ensemble_cased/essential-sane-65k.fullCased /root/LiveTranscriber/speech_recognition/models/dictionary/essential_sane_65k.fullCased" >> install.sh
 echo "rm /tmp/pocketsphinx-0.8/src/programs/continuous.c" >> install.sh
-echo "mv /root/LiveTranscriber/speech_recognition/tools/fatpocketsphinx/modified_continuous.c /tmp/pocketsphinx-0.8/src/programs/continuous.c" >> install.sh
+echo "cp /root/LiveTranscriber/speech_recognition/tools/fatpocketsphinx/modified_continuous.c /tmp/pocketsphinx-0.8/src/programs/continuous.c" >> install.sh
 echo "cd /tmp/pocketsphinx-0.8" >>  install.sh
 echo "make clean" >> install.sh
 echo "./autogen.sh" >> install.sh
