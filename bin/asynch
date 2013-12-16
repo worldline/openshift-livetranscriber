@@ -71,7 +71,7 @@ echo "cd /tmp" >> install.sh
 echo "git clone http://github.com/rubygems/rubygems" >> install.sh
 echo "cd rubygems" >> install.sh
 echo "ruby setup.rb" >> install.sh
-echo "gem install bundler redis rake puma" >> install.sh
+echo "gem install bundler redis rake" >> install.sh
 echo "cd /root/" >> install.sh
 echo "git clone https://github.com/steffel/LiveTranscriber.git" >> install.sh
 echo "cd LiveTranscriber" >> install.sh
